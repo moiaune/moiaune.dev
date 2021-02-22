@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - moiaune.dev</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="page-title">moiaune.dev</h1>
+
+    <nav class="main-nav">
+      <a class="main-nav__item" href="/">Home</a>
+      <a class="main-nav__item" href="/about">About</a>
+    </nav>
+  </header>
+
+  <article class="container single-post">
+    <h1>Exchange Online: Check your tenant for forwarding rules</h1>
+    <p class="post__meta">03. Jan 2021</p>
+
+    <div class="post__body">
+      <p>For years I’ve been a fan of the linux bash, with easy support for ssh-keys, colorized directory listings and
+        git info the prompt. But at the same time, I really love Powershell. I have finally found some usefull
+        Powershell modules that has made me switch completly to Powershell in the terminal.</p>
+
+      <h2 id="colorized-directory-listings">Colorized Directory Listings</h2>
+      <h3>Some test title</h3>
+
+      <p>The first module I’m going to introduce is the <strong>Get-ChildItemColor</strong> module by Joon Ro (<a
+          href="https://github.com/joonro/Get-ChildItemColor">github.com/joonro/Get-ChildItemColor</a>).</p>
+
+      <p>This module will override the <code class="language-plaintext highlighter-rouge">Out-Default</code> cmdlet and
+        give you colorized directory listings when using <code
+          class="language-plaintext highlighter-rouge">Get-ChildItem</code> or <code
+          class="language-plaintext highlighter-rouge">ls</code>.</p>
+
+      <p>You can easilly install it from the <a
+          href="https://www.powershellgallery.com/packages/Get-ChildItemColor">Powershell Gallery</a>.</p>
+
+      <div class="language-powershell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="n">Install-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">Get-ChildItemColor</span><span class="w"> </span><span class="nt">-Scope</span><span class="w"> </span><span class="nx">CurrentUser</span><span class="w"> </span><span class="nt">-AllowClobber</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+
+      <p><strong>NOTE:</strong> The <code class="language-plaintext highlighter-rouge">-AllowClobber</code> flag is
+        neccessary for it to override the <code class="language-plaintext highlighter-rouge">Out-Default</code> cmdlet.
+      </p>
+
+      <p>Now you can just add <code class="language-plaintext highlighter-rouge">Import-Module -Name
+          Get-ChildItemColor</code> to your Powershell profile.</p>
+
+      <h2 id="git-information-in-your-prompt">Git Information In Your Prompt</h2>
+
+      <p>The second module we’re going to add is the <code class="language-plaintext highlighter-rouge">posh-git</code>
+        module by Keith Dahlby (<a href="https://github.com/dahlbyk/posh-git">github.com/dahlbyk/posh-git</a>). This
+        will override your default prompt and add git information when in a folder with git initialized.
+        <strong>NOTE:</strong> This will not override your custom prompt, if you have defined one in your Powershell
+        profile.</p>
+
+      <p>This module is also available from the <a href="https://www.powershellgallery.com/packages/posh-git">Powershell
+          Gallery</a>. Currently, v1.0 is in beta, and is neccessary if you want support for Powershell Core 6.0 and up.
+        Version v0.x only supports Windows Powershell.</p>
+
+      <div class="language-powershell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="n">Install-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">posh-git</span><span class="w"> </span><span class="nt">-Scope</span><span class="w"> </span><span class="nx">CurrentUser</span><span class="w"> </span><span class="nt">-AllowPrerelease</span><span class="w"> </span><span class="nt">-Force</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+
+      <p>To be able to install the v1.0-beta we must include the <code
+          class="language-plaintext highlighter-rouge">-AllowPrerelease</code> flag.</p>
+
+      <p>Next, just add it to your Powershell profile <code class="language-plaintext highlighter-rouge">Import-Module
+          -Name posh-git</code>.</p>
+
+      <h2 id="using-ssh-keys-with-remote-git-repositories">Using SSH Keys With Remote Git Repositories</h2>
+
+      <p>The last module is <code class="language-plaintext highlighter-rouge">posh-sshell</code> which is a helper
+        module for your SSH client and used to be a part of the <code
+          class="language-plaintext highlighter-rouge">posh-git</code> module. This has now been separated into it’s own
+        module by the same creator Keith Dahlby (<a
+          href="https://github.com/dahlbyk/posh-sshell">github.com/dahlbyk/posh-sshell</a>).</p>
+
+      <p>As with the others, this is available from the <a
+          href="https://www.powershellgallery.com/packages/posh-sshell">Powershell Gallery</a>.</p>
+
+      <div class="language-powershell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="n">Install-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">posh-sshell</span><span class="w"> </span><span class="nt">-Scope</span><span class="w"> </span><span class="nx">CurrentUser</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+
+      <p>There is one cmdlet in particular that we’re interrested in, which is the <code
+          class="language-plaintext highlighter-rouge">Start-SshAgent</code> cmdlet. This will start your SSH agent
+        wether you’re using the Windows-native OpenSSH client, OpenSSH client that ships with Git for Windows or putty’s
+        Pageant client.</p>
+
+      <p>If you are using the Windows-native OpenSSH client, make sure that the service is not <code
+          class="language-plaintext highlighter-rouge">disabled</code>.</p>
+
+      <div class="language-powershell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="n">Get-Service</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">ssh-agent</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Select-Object</span><span class="w"> </span><span class="nx">Status</span><span class="p">,</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">StartType</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+
+      <p>If <code class="language-plaintext highlighter-rouge">StartType</code> says <code
+          class="language-plaintext highlighter-rouge">disabled</code> you can run the following command to enable it or
+        else <code class="language-plaintext highlighter-rouge">Start-SshAgent</code> will fail.</p>
+
+      <div class="language-powershell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="n">Get-Service</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">ssh-agent</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-Service</span><span class="w"> </span><span class="nt">-StartType</span><span class="w"> </span><span class="nx">Manual</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+
+      <p>Next, add the following to your profile.</p>
+
+      <div class="language-powershell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="n">Import-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">posh-sshell</span><span class="w">
+</span><span class="n">Start-SshAgent</span><span class="w"> </span><span class="nt">-Quiet</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+
+      <p>When the ssh-agent is started it will look for ssh-keys in your <code
+          class="language-plaintext highlighter-rouge">$env:USERPROFILE\.ssh</code> folder. If you add SSH keys after
+        the ssh-agent has started you can either restart it with</p>
+
+      <div class="language-powershell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="n">Stop-SshAgent</span><span class="w">
+</span><span class="nx">Start-SshAgent</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+
+      <p>or add it to the ssh-agent with</p>
+
+      <div class="language-powershell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c"># Adds $env:USERPROFILE\.ssh\id_rsa to the SSH agent.</span><span class="w">
+</span><span class="n">Add-SshKey</span><span class="w">
+
+</span><span class="c"># OR</span><span class="w">
+</span><span class="c"># Adds $env:USERPROFILE\.ssh\mykey to the SSH agent.</span><span class="w">
+</span><span class="n">Add-SshKey</span><span class="w"> </span><span class="nx">~\.ssh\mykey</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+
+      <h2 id="conclusion">Conclusion</h2>
+
+      <p>Now, atleast in my opinion you have a more similar workflow in Powershell that you would have in linux. It’s
+        really cool to see how far Powershell (and Windows) has come in the field of developer workflow.</p>
+
+    </div>
+  </article>
+
+  <footer>Copyright &copy; 2021 - Mads Moi-Aune</footer>
+
+</body>
+
+</html>
