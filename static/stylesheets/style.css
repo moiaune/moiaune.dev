@@ -98,6 +98,7 @@ header {
 .page-title {
   color: var(--color-yellow);
   font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 0;
 }
 
 .page-title:hover {
