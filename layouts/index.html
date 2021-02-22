@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<aside class="container introduction">
+  <img class="introduction__image" src="/images/avatar.jpg" alt="Mads Moi-Aune">
+  <div class="introduction__content">
+    <h2 class="introduction__title">Hei, I'm Mads 👋</h2>
+    <div class="introduction__body">
+      <p>I'm an DevOps Engineer from Norway 🇳🇴, spending my days writing code. I created this site as a personal notebook, but hopefully you will find something interresting too.</p>
+      <p>You can reach me at <a href="https://twitter.com/dotpwsh">@dotpwsh</a></p>
+    </div>
+  </div>
+</aside>
+
+<hr>
+
+<section class="container post-list">
+
+  {{ range first 10 .Site.RegularPages }}
+  <div class="post" onclick="window.location='{{.Permalink}}'">
+    <h3 class="post__title">
+      <a href="{{.Permalink}}">{{.Title}}</a>
+    </h3>
+    <p class="post__meta">{{.Date.Format "01 January, 2006"}} | {{ .WordCount }} words</p>
+
+    {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+    <ul class="post__categories">
+      {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+      <li class="post__categories-item {{ $tag }}">{{ $tag }}</li>
+      {{- end -}} {{- end -}}
+    </ul>
+    {{ end }}
+
+  </div>
+  {{ end }}
+</section>
+
+{{ end }}
