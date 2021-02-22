@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+<article class="container single-post">
+  <h1>{{.Title}}</h1>
+  <p class="post__meta">{{.Date.Format "01 January, 2006"}} | {{ .WordCount }} words</p>
+
+  <div class="post__body">
+    {{.Content}}
+  </div>
+</article>
+
+{{ end }}

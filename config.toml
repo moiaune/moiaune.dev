@@ -1,0 +1,16 @@
+baseURL = "https://moiaune.dev/"
+languageCode = "en-us"
+title = "moiaune.dev"
+
+PygmentsCodeFences = true
+PygmentsStyle = "fruity"
+
+[markup]
+  [markup.highlight]
+    tabWidth = 2
+
+[params]
+  OwnerName = "Mads Moi-Aune"
+
+[permalinks]
+  posts = "/:year/:month/:title/"

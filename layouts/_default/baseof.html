@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {{ block "title" . }}
+      {{ .Site.Title }}
+    {{ end }}
+  </title>
+
+  <!-- <link rel="stylesheet" href="/stylesheets/syntax.css"> -->
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="page-title">{{ .Site.Title }}</h1>
+
+    <nav class="main-nav">
+      <a class="main-nav__item" href="/">Home</a>
+      <a class="main-nav__item" href="/about">About</a>
+    </nav>
+  </header>
+
+  {{ block "main" . }}
+  {{ end }}
+
+  <footer>Copyright &copy; {{ now.Format "2006" }} - {{ .Site.Params.OwnerName }}</footer>
+
+</body>
+
+</html>

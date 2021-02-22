@@ -7,7 +7,7 @@
   --color-yellow: #fcf75e;
 
   --text-color: #FFFFFF;
-  --page-width: 800px;
+  --page-width: 850px;
 }
 
 * { box-sizing: border-box; padding: 0; margin: 0; }
@@ -24,6 +24,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+h2, h3 {
+  padding-top: 2rem;
+  font-weight: 900;
 }
 
 h1 {
@@ -38,22 +44,37 @@ a {
   color: var(--color-light-blue);
 }
 
-code {
-  background-color: var(--color-purple);
-  font-style: italic;
-  display: inline-block;
-  padding: .001rem .02rem;
-}
-
-pre code {
-  background-color: #240046;
-}
-
 hr {
   max-width: var(--page-width);
   color: var(--color-pink);
   margin: 4rem auto 5.5rem auto;
   padding: 0 1rem;
+}
+
+ul { 
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 1.5rem;
+}
+
+ol { 
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 1.5rem;
+}
+
+ul ul, ol ul { 
+  list-style-type: circle; 
+  list-style-position: inside; 
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+ol ol, ul ol { 
+  list-style-type: lower-latin; 
+  list-style-position: inside; 
+  margin-left: 1rem;
+  margin-bottom: 0;
 }
 
 .btn {
@@ -160,6 +181,7 @@ header {
 
 .post__title {
   font-size: 18px;
+  padding-top: 0;
 }
 
 .post__title a {
@@ -180,32 +202,37 @@ header {
 
 .post__categories-item {
   font-size: 14px;
-  padding:.1rem .25rem;
+  padding:.1rem .5rem;
 }
 
-.post__categories-item.go {
+.go {
   color: white;
   background-color: #118ab2;
 }
 
-.post__categories-item.powershell {
+.powershell {
   color: white;
   background-color: #073b4c;
 }
 
-.post__categories-item.windows {
+.windows {
   color: black; 
   background-color: #43aa8b;
 }
 
-.post__categories-item.azure {
+.azure {
   background-color: #3a86ff;
   color: white;
 }
 
-.post__categories-item.javascript {
+.javascript {
   background-color: #ffd166;
   color: black;
+}
+
+.servicenow {
+  background-color: #264653;
+  color: #FFFFFF;
 }
 
 .single-post .post__meta {
@@ -214,6 +241,22 @@ header {
 
 .post__meta {
   font-size: 14px;
+}
+
+.highlight pre {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  overflow: auto;
+  word-wrap: normal;
+  word-break: normal;
+  border: 1px solid var(--color-pink);
+  border-radius: 8px;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 footer {
