@@ -175,7 +175,8 @@ header {
   border-radius: 8px;
 }
 
-.post:hover {
+.post:hover,
+.post:active {
   cursor: pointer;
   border-color: var(--color-pink);
 }
@@ -190,7 +191,8 @@ header {
   text-decoration: none;
 }
 
-.post:hover .post__title a {
+.post:hover .post__title a,
+.post:active .post__title a {
   text-decoration: underline;
 }
 
@@ -263,4 +265,43 @@ pre[class*="language-"] {
 footer {
   text-align: center;
   padding: 5.5rem 1rem 4rem 1rem;
+}
+
+
+@media only screen and (device-width: 375px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+  }
+
+  hr {
+    margin: .5rem 1rem 2rem 1rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .introduction {
+    grid-template-columns: 1fr;
+  }
+
+  .introduction__content {
+    text-align: justify;
+  }
+
+  .post-list {
+    grid-template-columns: 1fr;
+  }
 }
