@@ -13,4 +13,4 @@ PygmentsStyle = "fruity"
   OwnerName = "Mads Moi-Aune"
 
 [permalinks]
-  posts = "/:year/:month/:title/"
+  posts = "/:year/:month/:day/:title/"
