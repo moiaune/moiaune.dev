@@ -34,7 +34,7 @@ touch index.php
 
 Our authorize URL will look something like this in the end.
 
-```
+```plaintext
 https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize?
 client_id=<APP_REGISTRATION_CLIENT_ID>
 &response_type=code
@@ -55,8 +55,9 @@ client_id=<APP_REGISTRATION_CLIENT_ID>
 #### Example
 
 ```php
-<?php
 // filename: index.php
+
+<?php
 
 function buildAuthorizeCodeURL($tenantID, $clientID, $callbackURI, $scope) {
     $baseURL = sprintf('https://login.microsoftonline.com/%s/oauth2/v2.0/authorize?', $tenantID);
@@ -97,8 +98,9 @@ touch callback.php
 And then add some code. I'll explain in afterwards.
 
 ```php
-<?php
 // filename: callback.php
+
+<?php
 
 if (! isset($_GET['code'])) {
     throw new Exception("Missing query parameter 'code'");
