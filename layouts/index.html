@@ -31,7 +31,7 @@
       <a href="{{.Permalink}}">{{.Title}}</a>
     </h3>
     <p class="post__meta">
-      {{.Date.Format "01 January, 2006"}} | {{ .WordCount }} words
+      {{.Date.Format "02 January, 2006"}} | {{ .WordCount }} words
     </p>
 
     {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
@@ -48,4 +48,3 @@
 </section>
 
 {{ end }}
-
