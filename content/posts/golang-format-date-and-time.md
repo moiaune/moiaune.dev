@@ -1,6 +1,6 @@
 ---
 title: 'Golang: Format Date and Time'
-date: 2021-08-13T08:23:11+02:00
+date: 2021-08-13T00:00:00+01:00
 tags: ['golang']
 draft: false
 ---
