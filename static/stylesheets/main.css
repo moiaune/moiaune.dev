@@ -158,8 +158,10 @@ ul ol {
 
 table {
   width: 100%;
+  max-width: 100%;
   font-size: 1rem;
   border-collapse: separate;
+  overflow-x: scroll;
 }
 table tr:first-child th:first-child {
   border-top-left-radius: 8px;
