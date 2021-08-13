@@ -22,6 +22,7 @@ toTime, _ := time.Parse(layout, timeToParse)
 fmt.Printf("(%T): %s\n", toTime, toTime)
 
 // output: (time.Time): 2021-09-13 07:43:52.823 +0000 UTC
+
 ```
 
 ### Formatting date
