@@ -11,7 +11,7 @@ Most programming languages use the same layout (dd-mm-yyyy) to format date and t
 
 ### Parsing exisiting date
 
-```golang
+```go
 var (
     timeToParse = "2021-09-13T07:43:52.823"
     layout      = "2006-01-02T03:04:05.999"
@@ -22,7 +22,6 @@ toTime, _ := time.Parse(layout, timeToParse)
 fmt.Printf("(%T): %s\n", toTime, toTime)
 
 // output: (time.Time): 2021-09-13 07:43:52.823 +0000 UTC
-
 ```
 
 ### Formatting date
