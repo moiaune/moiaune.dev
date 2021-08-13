@@ -1,7 +1,7 @@
 ---
-title: "Getting Started With Azure Functions"
+title: 'Getting Started With Azure Functions'
 date: 2020-02-19T00:00:00+01:00
-tags: ["javascript", "azure"]
+tags: ['javascript', 'azure']
 draft: false
 ---
 
@@ -46,9 +46,9 @@ Now that we're logged in we can start working with Azure.
 
 To setup an Azure Function we're going to need the following resources from Azure.
 
-* Resource Group
-* Storage Account
-* Azure Function
+- Resource Group
+- Storage Account
+- Azure Function
 
 Each of them is going to need, among other things, a name and location. To make it easier for us let's prep some variables.
 
