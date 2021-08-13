@@ -272,6 +272,7 @@ header {
   display: flex;
   column-gap: 0.5rem;
   margin-bottom: 1rem;
+  padding-left: 0;
 }
 
 .post__categories-item {
@@ -279,9 +280,10 @@ header {
   padding: 0.1rem 0.5rem;
 }
 
-.go {
-  color: white;
-  background-color: #118ab2;
+.golang {
+  color: black;
+  // background-color: #118ab2;
+  background-color: #69d6e4;
 }
 
 .powershell {
