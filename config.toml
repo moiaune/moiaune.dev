@@ -7,7 +7,8 @@ PygmentsStyle = "fruity"
 
 [markup]
   [markup.highlight]
-    tabWidth = 2
+    tabWidth = 4
+    codeFences = true
 
 [params]
   OwnerName = "Mads Moi-Aune"

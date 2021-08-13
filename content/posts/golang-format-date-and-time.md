@@ -22,7 +22,6 @@ toTime, _ := time.Parse(layout, timeToParse)
 fmt.Printf("(%T): %s\n", toTime, toTime)
 
 // output: (time.Time): 2021-09-13 07:43:52.823 +0000 UTC
-
 ```
 
 ### Formatting date
@@ -34,7 +33,6 @@ fmt.Println("Formatted:", now.Format("02-01-2006 15:04:05 -0700 MST"))
 
 // output: Default: 2021-08-13 09:01:29.233757 +0200 CEST m=+0.000065018
 // output: Formatted: 13-08-2021 09:01:29 +0200 CEST
-
 ```
 
 ## Options
