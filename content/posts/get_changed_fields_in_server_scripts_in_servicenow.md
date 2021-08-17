@@ -1,5 +1,5 @@
 ---
-title: "Servicenow: Get Changed Fields in Server Script"
+title: "Get changed fields in server scripts in ServiceNow"
 date: 2021-08-17T10:04:06+02:00
 draft: false
 ---
