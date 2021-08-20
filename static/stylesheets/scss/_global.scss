@@ -120,6 +120,10 @@ ul {
     color: var(--color-gray);
     margin-right: .5rem;
   }
+
+  li a {
+      color: inherit;
+  }
 }
 
 ol {
@@ -131,6 +135,7 @@ ol {
 ul, ol {
   color: var(--color-green);
   font-size: 1rem;
+  padding-left: 0;
 }
 
 ul ul,
@@ -366,10 +371,6 @@ footer {
 }
 
 @media only screen and (max-width: 580px) {
-  body {
-    font-size: 16px;
-  }
-
   header {
     grid-template-columns: 1fr;
   }
@@ -394,11 +395,12 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .introduction__content {
-    text-align: justify;
-  }
-
   .post-list {
     grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+
+  .single-post h1 {
+      font-size: 2rem;
   }
 }
