@@ -1,33 +1,35 @@
 {{ define "main" }}
 
 <aside class="container introduction">
-    <div class="introduction__content">
-        <h2 class="introduction__title">Hi, I'm Mads 👋</h2>
-        <div class="introduction__body">
-            <p>
-                I'm an DevOps Engineer from Norway 🇳🇴, spending my days writing code. I
-                created this site as a personal notebook, but hopefully you will find
-                something interresting too.
-            </p>
-            <p>
-                You can reach me at
-                <a href="https://twitter.com/moiaunedev">@moiaunedev</a>
-            </p>
-        </div>
+  <div class="introduction__content">
+    <h2 class="introduction__title">Hi, I'm Mads 👋</h2>
+    <div class="introduction__body">
+      <p>
+        I'm an DevOps Engineer from Norway 🇳🇴, spending my days writing code. I
+        created this site as a personal notebook, but hopefully you will find
+        something interresting too.
+      </p>
+      <p>
+        You can reach me at
+        <a href="https://twitter.com/moiaunedev">@moiaunedev</a>
+      </p>
     </div>
+  </div>
 </aside>
 
 <hr />
 
 <section class="container post-list">
-    {{ range first 10 .Site.RegularPages }}
-    <div class="post">
-        <h3 class=" post__title">
-            <a href="{{.Permalink}}"><span class="hashtag">*</span> {{.Title}} <span
-                    class="date">({{.Date.Format "02-01-2006"}})</span></a>
-        </h3>
-    </div>
-    {{ end }}
+  {{ range.Site.RegularPages }}
+  <div class="post">
+    <h3 class="post__title">
+      <a href="{{.Permalink}}"
+        ><span class="hashtag">*</span> {{.Title}}
+        <span class="date">({{.Date.Format "02-01-2006"}})</span></a
+      >
+    </h3>
+  </div>
+  {{ end }}
 </section>
 
 {{ end }}
