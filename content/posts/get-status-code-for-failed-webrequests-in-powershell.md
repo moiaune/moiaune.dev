@@ -1,5 +1,5 @@
 ---
-title: 'Get Status Code for Failed Webrequests in Powershell'
+title: 'Get status code for failed webrequests in Powershell'
 date: 2021-09-23T21:35:29+02:00
 draft: false
 ---
