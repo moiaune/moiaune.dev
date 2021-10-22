@@ -20,7 +20,7 @@
         content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
-    <!-- <meta property="og:image" content=""> -->
+    <meta property="og:image" content="/android-chrome-512x512.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
@@ -31,7 +31,10 @@
         content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}">
     <link rel="canonical" href="{{ .Permalink }}">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- plausible: self-hosted analytics -->
     <script async defer data-domain="moiaune.dev" src="https://stats.moiaune.dev/js/plausible.js"></script>
