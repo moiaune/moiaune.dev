@@ -1,56 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {{ block "title" . }}
-      {{ .Site.Title }}
-      {{ end }}
-    </title>
+    {{ if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+    {{- else -}}
+    <title>{{ .Title }} – {{ .Site.Title }}</title>
+    {{- end }}
 
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
 
     <!-- plausible: self-hosted analytics -->
-    <script
-      async
-      defer
-      data-domain="moiaune.dev"
-      src="https://stats.moiaune.dev/js/plausible.js"
-    ></script>
+    <script async defer data-domain="moiaune.dev" src="https://stats.moiaune.dev/js/plausible.js"></script>
 
     <!-- <link rel="stylesheet" href="/stylesheets/syntax.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/stylesheets/main.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <h1 class="page-title"># {{ .Site.Title }}</h1>
+        <h1 class="page-title"># {{ .Site.Title }}</h1>
 
-      <nav class="main-nav">
-        <a class="main-nav__item" href="/">Home</a>
-        <a class="main-nav__item" href="/about">About</a>
-      </nav>
+        <nav class="main-nav">
+            <a class="main-nav__item" href="/">Home</a>
+            <a class="main-nav__item" href="/about">About</a>
+        </nav>
     </header>
 
     {{ block "main" . }}
     {{ end }}
 
     <footer>
-      <p>
-        Copyright &copy; {{ now.Format "2006" }} - {{ .Site.Params.OwnerName }}
-      </p>
-      <p>
-        Powered by <a href="https://gohugo.io">Hugo</a> and
-        <a href="https://netlify.com">Netlify</a>
-      </p>
+        <p>
+            Copyright &copy; {{ now.Format "2006" }} - {{ .Site.Params.OwnerName }}
+        </p>
+        <p>
+            Powered by <a href="https://gohugo.io">Hugo</a> and
+            <a href="https://netlify.com">Netlify</a>
+        </p>
     </footer>
-  </body>
+</body>
+
 </html>
