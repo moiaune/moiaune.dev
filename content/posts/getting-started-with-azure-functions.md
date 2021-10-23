@@ -1,7 +1,8 @@
 ---
 title: 'Getting Started With Azure Functions'
-date: 2020-02-19T00:00:00+01:00
+description: "Azure Functions is one of Microsofts serverless services that you can setup in Azure. Being serverless means that you dont have to worry about the infrastructure and environment behind it and you will only pay for the capacity that you actually use when the function is running."
 tags: ['javascript', 'azure']
+date: 2020-02-19T00:00:00+01:00
 draft: false
 ---
 

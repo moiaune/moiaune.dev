@@ -1,7 +1,8 @@
 ---
 title: "Exchange Online: Check your tenant for forwarding rules"
+description: "In this guide we’ll take a look at how you can scan your tenant for “hidden” forwarding rules by using Powershell with Exchange Online."
 date: 2018-12-07T00:00:00+01:00
-tags: ["powershell"]
+tags: ["powershell", "office365"]
 draft: false
 ---
 
@@ -68,14 +69,14 @@ The output looks a little something like this:
 PS C:\Users\dotsh> .\ExportExchangeForwardingInboxRules.ps1
 ...
 Mailbox user@contoso.com has the following rules configured:
-  
+
 Name                  : SilentForwarding
 PrimarySmtpAddress    : user@contoso.com
 Identity              : Example User 1\8573016583648562395
 RedirectTo            :
 ForwardTo             : {"Malicous User" [SMTP:hacker@l33t.com]}
 ForwardAsAttachmentTo :
-  
+
 Name                  : MyRule
 PrimarySmtpAddress    : user@contoso.com
 Identity              : Example User 1\8573016583648562395
@@ -83,7 +84,7 @@ RedirectTo            :
 ForwardTo             : {"Example User 2" [SMTP:user2@contoso.com], "Example User 3" [SMTP:user3@contoso.com],
                         "Example User 4" [SMTP:user4@contoso.com]}
 ForwardAsAttachmentTo :
-  
+
 ...
 ```
 

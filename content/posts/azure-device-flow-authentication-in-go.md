@@ -1,6 +1,7 @@
 ---
 title: "Azure Device Flow Authentication in Go"
 description: "Create a simple test application in Go for authenticating to Azure with Device Flow mechanism"
+tags: ['go', 'golang', 'azure']
 date: 2021-10-22T11:44:49+02:00
 draft: false
 ---

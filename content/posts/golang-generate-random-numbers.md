@@ -1,7 +1,8 @@
 ---
 title: 'Golang: Generate Random Numbers'
+description: "Here's how to generate pseudorandom numbers in Go between to values. NOTE: You should always seed your random generator, or else it will produce the same result every time."
 date: 2021-08-13T11:18:04+02:00
-tags: ['golang']
+tags: ['go', 'golang']
 draft: false
 ---
 

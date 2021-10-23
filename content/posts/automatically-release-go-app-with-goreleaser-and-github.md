@@ -1,5 +1,7 @@
 ---
 title: 'Automatically release Go app with Goreleaser and Github'
+description: "We're taking a look at how to automatically release Go applications with Goreleaser and Github"
+tags: ['go', 'golang', 'github', 'automation']
 date: 2021-08-24T01:02:53+02:00
 draft: true
 ---

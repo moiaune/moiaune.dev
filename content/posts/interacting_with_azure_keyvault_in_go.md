@@ -1,5 +1,7 @@
 ---
 title: 'Interacting with Azure Key Vault in Go'
+description: "Most times when working with API's there some kind of documentation on how to iteract with it. Working with Azure SDK for Go is a different story. There's almost no documentation (except the code itself)."
+tags: ["go", "golang", "azure", "keyvault"]
 date: 2021-08-20T23:18:32+02:00
 draft: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: 'Get type definition in Powershell'
+description: "Today I went back to some Powershell scripting with the Az module and it frustrated me that I wasn't easily able to know what properties `Get-AzADGroup` (or any of the other Az cmdlets) returned to me without actually invoking the cmdlet."
 tags: ['powershell']
 date: 2021-08-27T09:43:57+02:00
 draft: false

@@ -1,8 +1,9 @@
 ---
 title: "ServiceNow: Sending notifications to Microsoft Teams"
+description: "Microsoft Teams support different Connections and one of the simpliest is "Incomming Webhook" which gives you a URL that you can POST to with a correctly configured JSON body and the result will be displayed in your specified channel. In this guide we’ll set this up and POST to it from Service-Now when an incident is created or updated."
+tags: ["servicenow", "javascript"]
 date: 2018-11-29T00:00:00+01:00
 draft: false
-tags: ["servicenow", "javascript"]
 ---
 
 Microsoft Teams support different Connections and one of the simpliest is "Incomming Webhook" which gives you a URL that you can POST to with a correctly configured JSON body and the result will be displayed in your specified channel. In this guide we’ll set this up and POST to it from Service-Now when an incident is created or updated.
@@ -22,13 +23,13 @@ Take note of the URL in the greyed out box starting with "https://outlook.office
 
 To be able to send an outbound REST message in Service-Now you must first create and configure one. In your application sidebar go to **System Web Services → Outbound → REST Message** and create a new REST Message. Fill out the required information.
 
-**Name** – We will refeer to this in our Business Rule later  
+**Name** – We will refeer to this in our Business Rule later
 **Endpoint** – Paste in the URL from your "Incomming Webhook" in Microsoft Teams
 
 By default Service-Now will only create a GET method for our REST Message. Edit your newly created REST Message and scroll down to "HTTP Methods" and create a new one for POST. Fill out the required information.
 
-**Name** – Just set the name to be ‘POST’ (without quotes)  
-**HTTP Method** – This must be set to POST, which is the method Microsoft Teams expects us to use  
+**Name** – Just set the name to be ‘POST’ (without quotes)
+**HTTP Method** – This must be set to POST, which is the method Microsoft Teams expects us to use
 **Endpoint** – Paste in the same URL as before
 
 Now our Outbound REST Message is ready and we can create a Business Rule to trigger it.
@@ -57,9 +58,9 @@ If you have multiple business rule with the same filtering, you can decide in wh
 
 This is were most of the power lies. Here we can set our colum ⇒ value filters. In our demo we want to set these conditions:
 
-**Active** is true  
-**Assignment group** is ‘Monitoring’  
-**Assigned to** is empty  
+**Active** is true
+**Assignment group** is ‘Monitoring’
+**Assigned to** is empty
 **Priority** is ‘1 – Critical’
 
 And we want it to execute on both database **inserts** and **updates**. The reason we specify Assigned to to be empty is if we did not the rule would execute everytime the incident is updated, even though it is already assigned.
@@ -75,7 +76,7 @@ At the top of your form, to the right, you will se a checkbox for Advanced. Make
     gs.log("OUTBOUND REST - Teams monit_alert pri1 - Current is not defined");
     return;
   }
-      
+
   var requestBody;
   var responseBody;
   var status;
@@ -122,7 +123,7 @@ At the top of your form, to the right, you will se a checkbox for Advanced. Make
         ]
     }]
   };
-      
+
   try {
     r = new sn_ws.RESTMessageV2("Teams monit_alert pri1", "post");
     r.setRequestBody(JSON.stringify(body));

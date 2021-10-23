@@ -1,7 +1,8 @@
 ---
 title: 'Golang: Format Date and Time'
+description: "Most programming languages use the same layout (dd-mm-yyyy) to format date and time, but Go decided to go a different route. Below is a little cheat sheet of how to format date and time in Go."
 date: 2021-08-13T00:00:00+01:00
-tags: ['golang']
+tags: ['go', 'golang']
 draft: false
 ---
 

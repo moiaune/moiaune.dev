@@ -1,7 +1,8 @@
 ---
 title: "Enable External Booking of Meeting Rooms"
+description: "From time to time you might need to share one or more of your meeting rooms with external users. In this posts we're going through three options for how you can enable this"
 date: 2020-02-14T00:00:00+01:00
-tags: ["powershell"]
+tags: ["powershell", "office365"]
 draft: false
 ---
 
