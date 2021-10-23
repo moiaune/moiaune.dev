@@ -1,15 +1,17 @@
 {{ define "main" }}
 
 <article class="container single-post">
-  <h1>{{.Title}}</h1>
-  <p class="post__meta">
-    {{.Date.Format "02 January, 2006"}} | {{ .WordCount }} words
-  </p>
+    <h1>{{.Title}}</h1>
+    <p class="post__meta">
+        {{.Date.Format "02 January, 2006"}} | {{ .WordCount }} words | <a
+            href="https://raw.githubusercontent.com/madsaune/moiaune.dev/main/content/posts/{{.File.LogicalName}}">View
+            Raw</a> | <a
+            href="https://github.com/madsaune/moiaune.dev/commits/main/content/posts/{{.File.LogicalName}}">History</a>
+    </p>
 
-  <div class="post__body">
-    {{.Content}}
-  </div>
+    <div class="post__body">
+        {{.Content}}
+    </div>
 </article>
 
 {{ end }}
-
