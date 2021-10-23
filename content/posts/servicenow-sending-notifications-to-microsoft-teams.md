@@ -1,6 +1,6 @@
 ---
 title: "ServiceNow: Sending notifications to Microsoft Teams"
-description: "Microsoft Teams support different Connections and one of the simpliest is "Incomming Webhook" which gives you a URL that you can POST to with a correctly configured JSON body and the result will be displayed in your specified channel. In this guide we’ll set this up and POST to it from Service-Now when an incident is created or updated."
+description: "Microsoft Teams support different Connections and one of the simpliest is 'Incomming Webhook' which gives you a URL that you can POST to with a correctly configured JSON body and the result will be displayed in your specified channel. In this guide we’ll set this up and POST to it from Service-Now when an incident is created or updated."
 tags: ["servicenow", "javascript"]
 date: 2018-11-29T00:00:00+01:00
 draft: false
