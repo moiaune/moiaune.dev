@@ -8,6 +8,8 @@ draft: false
 
 If you are sending web requests with Powershell you will notice that if your requests fails, that is if it returns any status code other than 2xx, it will thrown an error. Now, how do get the details of the failed request?
 
+## StatusCode
+
 In Powershell, when you use `Invoke-WebRequest` or `Invoke-RestMethod`, it will give you details about the failed request in the `$_.Exception.Response` object. Let's say you want to know if the error is because of a bad request or an internal server error, you can do this:
 
 ```powershell
@@ -61,5 +63,24 @@ try {
     } else {
         Write-Error "Expected 200, got $([int]$StatusCode)"
     }
+}
+```
+
+## Response content
+
+Many API's will give you additional information in the response body when a request fails. This content is not stored i the `$_.Exception.Response` object, but in `$_.ErrorDetails.Message`. To simply our previous example we can do this.
+
+NOTE: `https://jsonplaceholder.typicode.com` does not return status code or an additional response body when failing, but in theory if your API supports it, this is how you would extract that information.
+
+```powershell
+using namespace System.Net
+
+try {
+    $response = Invoke-RestMethod -Uri "https://jsonplaceholder.typicode.com/users/0"
+} catch {
+    $StatusCode = $_.Exception.Response.StatusCode
+    $ErrorMessage = $_.ErrorDetails.Message
+
+    Write-Error "$([int]$StatusCode) $($StatusCode) - $($ErrorMessage)"
 }
 ```
