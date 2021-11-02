@@ -1,5 +1,5 @@
 ---
-title: "Resources"
+title: "Bookmarks"
 date: 2021-02-22T21:29:24+01:00
 draft: false
 ---
