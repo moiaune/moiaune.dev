@@ -2,7 +2,7 @@
 title: "Generate Microsoft Partner Center Refresh Token"
 date: 2021-11-03T23:22:03+01:00
 tags: ["powershell", "partner-center"]
-draft: true
+draft: false
 ---
 
 Microsoft Partner Center is a portal where you can manage all of your CSP customers and can give you a lot of access and power to do so. Therefor you should naturally have great security on the users that has access to this portal. Like MFA for example.
