@@ -44,7 +44,7 @@ $tokenSplat = @{
 $token = New-PartnerAccessToken @tokenSplat
 ```
 
-This will open a new tab in your browser and ask you to login. Now you must login with your Partner Center user credentials. When that is done, and if successfull, your refresh token is now stored in `$token` and can be accessed like `$token.RefreshToken`.
+This will open a new tab in your browser and ask you to login. Now you must login with your Partner Center user credentials. When that is done, and if successfull, your refresh token is now stored in `$token` and can be accessed like `$token.RefreshToken`. This will also give you an access token if you want to work with the REST API directly. This access token must  be included in the `Authorization` header as `Bearer <accessToken>`. Its not needed when using the PartnerCenter Powershell module.
 
 ## 3. Connect to Partner Center
 
@@ -61,3 +61,24 @@ Connect-PartnerCenter @connectSplat
 ```
 
 You should now be logged in with the same permissions as your Partner Center user.
+
+## 4. Generate new access token
+
+If you already have a refresh token, you can generate a new access token (as they only live for 1 hour) by running the `New-PartnerAccessToken` cmdlet with a different set of parameters.
+
+Use the previous `$appId`, `$credential` and `$tenantId` from when you generated the refresh token.
+
+```powershell
+$refreshToken = "<refresh_token>"
+$tokenSplat = @{
+    ApplicationId        = $appId
+    Credential           = $credential
+    Scopes               = "https://api.partnercenter.microsoft.com/user_impersonation"
+    ServicePrincipal     = $true
+    TenantId             = $tenantId
+    RefreshToken         = $refreshToken
+}
+$newToken = New-PartnerAccessToken @tokenSplat
+```
+
+This will give you a new access token without you having to login with MFA. It will also give a new refresh token. This is because refresh tokens from Partner Center only lives for 90 days, so you must updated your refresh token before it expires. If you are storing the refresh token in like Azure Key Vault its a good idea to update the refresh token when generating a new access token. Then you will always have an up-to-date refresh token.
