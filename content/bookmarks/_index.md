@@ -13,6 +13,7 @@ This page is a collection of external resources that I found usefull.
 - [Assign Azure roles using the REST API](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-rest)
 - [Azure built-in roles](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles)
 - [Quickstart: Create a PowerShell function in Azure from the command line](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-powershell?tabs=azure-powershell%2Cbrowser)
+- [Azure architecture icons](https://docs.microsoft.com/en-us/azure/architecture/icons/)
 
 ## Go
 
