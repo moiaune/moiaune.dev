@@ -39,7 +39,7 @@
 
   --font-size: 18px;
   --text-color: var(--color-fg);
-  --page-width: 850px;
+  --page-width: 910px;
 }
 
 body {
@@ -205,7 +205,7 @@ code {
 
 header {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   padding: 1rem;
   max-width: var(--page-width);
   margin: 0 auto 3rem auto;
@@ -375,7 +375,7 @@ footer {
   padding: 5.5rem 1rem 4rem 1rem;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: var(--page-width)) {
   header {
     grid-template-columns: 1fr;
   }
