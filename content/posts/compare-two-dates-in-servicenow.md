@@ -1,12 +1,12 @@
 ---
-title: 'compare two dates in servicenow'
+title: 'Compare two dates in ServiceNow'
 date: 2022-05-10T00:00:00+00:00
 draft: false
 ---
 
 To work with date and datetime in ServiceNow we can use the [GlideDateTime API](https://developer.servicenow.com/dev.do#!/reference/api/sandiego/server/no-namespace/c_APIRef).
 
-## get duration
+## Get duration
 
 ```javascript
 var date1 = new GlideDateTime('2022-05-10 09:00:00');
@@ -18,7 +18,7 @@ gs.info(diff.getDisplayValue());
 // should print: 2 Days 3 Hours
 ```
 
-## adding/removing
+## Adding/removing
 
 ```javascript
 var date1;
@@ -40,9 +40,9 @@ date1 = new GlideDateTime('2022-05-10 09:00:00');
 date1.addSeconds(-1000); // 2022-05-10 08:43:20
 ```
 
-## compare datetime
+## Compare datetime
 
-### simple comparison
+### Simple comparison
 
 ```javascript
 var date1 = new GlideDateTime('2022-05-10 09:00:00');
@@ -57,7 +57,7 @@ if (date1 > date2) {
 // should print: date 1 is older than date 2
 ```
 
-### after/before
+### After/before
 
 ```javascript
 var date1 = new GlideDateTime('2022-05-10 09:00:00');
@@ -74,7 +74,7 @@ if (date1.before(date2)) {
 // should print: date 1 is older than date 2
 ```
 
-### real world example
+### Real world example
 
 Let's say we want to log all incidents that hasnt been updated in the last 7 days.
 
