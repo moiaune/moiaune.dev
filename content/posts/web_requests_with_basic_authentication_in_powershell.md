@@ -47,12 +47,16 @@ On the last line we send our request with the custom header.
 Since Basic Authentication is so common, Powershell has of course implemented a simpler solution.
 
 ```powershell
+# Again, these should come from env vars, Key Vault or some other secret store
 $username = "user1"
 $password = "pa55w0rd!"
 
+# Since our password is plaintext we must convert it to a secure string
+# before creating a PSCredential object
 $securePassword = ConvertTo-SecureString -String $password -AsPlainText
 $credential = [PSCredential]::new($username, $securePassword)
 
+# Tell Invoke-RestMethod to use Basic Authentication scheme with our credentials
 $response = Invoke-RestMethod -Uri "https://example.com/api" -Authentication Basic -Credential $credential
 ```
 
