@@ -15,6 +15,10 @@ This page is a collection of external resources that I found usefull.
 - [Quickstart: Create a PowerShell function in Azure from the command line](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-powershell?tabs=azure-powershell%2Cbrowser)
 - [Azure architecture icons](https://docs.microsoft.com/en-us/azure/architecture/icons/)
 
+## Github
+
+- [Git Commit Message Emoji](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
+
 ## Go
 
 - [The Go Playground](https://play.golang.org/)
@@ -24,6 +28,12 @@ This page is a collection of external resources that I found usefull.
 ## Microsoft
 
 - [MSAL Authentication Flows](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
+
+## Powershell
+
+- [PowerShell Practice and Style](https://poshcode.gitbook.io/powershell-practice-and-style/introduction/readme)
+- [MSShells.net](https://msshells.net/)
+- [DevBlogs: PowerShell Team](https://devblogs.microsoft.com/powershell/)
 
 ## ServiceNow
 
