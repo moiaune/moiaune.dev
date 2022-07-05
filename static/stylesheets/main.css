@@ -696,6 +696,9 @@ table tr:nth-child(odd) td {
 .highlight * {
   background-color: var(--color-bg-1) !important;
 }
+.highlight .ln {
+  margin-right: 1rem;
+}
 
 code {
   color: var(--color-orange-bright);

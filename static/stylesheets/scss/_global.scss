@@ -188,6 +188,10 @@ table {
   & * {
     background-color: var(--color-bg-1) !important;
   }
+
+  & .ln {
+      margin-right: 1rem;
+  }
 }
 
 code {
