@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
     <title>{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}</title>
-    <meta name="title"
-        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}">
+    <meta
+      name="title"
+      content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}"
+    />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title"
-        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}">
-    <meta property="og:description"
-        content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}">
-    <meta property="og:site_name"
-        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="/android-chrome-512x512.png">
+    <meta
+      property="og:title"
+      content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}"
+    />
+    <meta
+      property="og:description"
+      content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}"
+    />
+    <meta
+      property="og:site_name"
+      content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:image" content="/android-chrome-512x512.png" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:url" content="{{ .Permalink }}">
-    <meta property="twitter:title"
-        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}">
-    <meta property="twitter:description"
-        content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}">
-    <link rel="canonical" href="{{ .Permalink }}">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@dotpwsh" />
+    <meta name="twitter:creator" content="@dotpwsh" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta
+      name="twitter:title"
+      content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}"
+    />
+    <meta
+      name="twitter:description"
+      content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}"
+    />
+    <link rel="canonical" href="{{ .Permalink }}" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- plausible: self-hosted analytics -->
     <script async defer data-domain="moiaune.dev" src="https://stats.moiaune.dev/js/plausible.js"></script>
@@ -44,31 +56,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/stylesheets/main.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="page-title"># {{ .Site.Title }}</h1>
+      <h1 class="page-title"># {{ .Site.Title }}</h1>
 
-        <nav class="main-nav">
-            <a class="main-nav__item" href="/">Enter-Home</a>
-            <a class="main-nav__item" href="/bookmarks">Get-Bookmarks</a>
-            <a class="main-nav__item" href="/about">Show-About</a>
-        </nav>
+      <nav class="main-nav">
+        <a class="main-nav__item" href="/">Enter-Home</a>
+        <a class="main-nav__item" href="/bookmarks">Get-Bookmarks</a>
+        <a class="main-nav__item" href="/about">Show-About</a>
+      </nav>
     </header>
 
-    {{ block "main" . }}
-    {{ end }}
+    {{ block "main" . }} {{ end }}
 
     <footer>
-        <p>
-            Copyright &copy; {{ now.Format "2006" }} - {{ .Site.Params.OwnerName }}
-        </p>
-        <p>
-            Powered by <a href="https://gohugo.io">Hugo</a> and
-            <a href="https://netlify.com">Netlify</a>
-        </p>
+      <p>Copyright &copy; {{ now.Format "2006" }} - {{ .Site.Params.OwnerName }}</p>
+      <p>
+        Powered by <a href="https://gohugo.io">Hugo</a> and
+        <a href="https://netlify.com">Netlify</a>
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>
