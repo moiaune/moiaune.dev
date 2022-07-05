@@ -46,7 +46,7 @@ On the last line we send our request with the custom header.
 
 Since Basic Authentication is so common, Powershell has of course implemented a simpler solution.
 
-```powershell
+```powershell {linenos=inline}
 # Again, these should come from env vars, Key Vault or some other secret store
 $username = "user1"
 $password = "pa55w0rd!"
