@@ -5,51 +5,74 @@
    * URL: https://github.com/morhetz/gruvbox
    */
 
-  --color-bg: #282828;
-  --color-bg-0h: #1d2021;
-  --color-bg-1: #3c3836;
-  --color-bg-2: #504945;
-  --color-bg-3: #665c54;
-  --color-bg-4: #7c6f64;
+  // --color-bg: #282828;
+  // --color-bg-0h: #1d2021;
+  // --color-bg-1: #3c3836;
+  // --color-bg-2: #504945;
+  // --color-bg-3: #665c54;
+  // --color-bg-4: #7c6f64;
 
-  --color-fg: #ebdbb2;
-  --color-fg-0: #fbf1c7;
-  --color-fg-1: #ebdbb2;
-  --color-fg-2: #d5c4a1;
-  --color-fg-3: #bdae93;
-  --color-fg-4: #a89984;
+  // --color-fg: #ebdbb2;
+  // --color-fg-0: #fbf1c7;
+  // --color-fg-1: #ebdbb2;
+  // --color-fg-2: #d5c4a1;
+  // --color-fg-3: #bdae93;
+  // --color-fg-4: #a89984;
 
-  --color-red: #cc241d;
-  --color-red-bright: #fb4934;
-  --color-green: #98971a;
-  --color-green-bright: #b8bb26;
-  --color-yellow: #d79921;
-  --color-yellow-bright: #fabd2f;
-  --color-blue: #458588;
-  --color-blue-bright: #83a598;
-  --color-purple: #b16286;
-  --color-purple-bright: #d3869b;
-  --color-aqua: #689d6a;
-  --color-aqua-bright: #8ec07c;
-  --color-gray: #928374;
-  --color-gray-medium: #928374;
-  --color-gray-bright: #a89984;
-  --color-orange: #d65d0e;
-  --color-orange-bright: #fe8019;
+  // --color-red: #cc241d;
+  // --color-red-bright: #fb4934;
+  // --color-green: #98971a;
+  // --color-green-bright: #b8bb26;
+  // --color-yellow: #d79921;
+  // --color-yellow-bright: #fabd2f;
+  // --color-blue: #458588;
+  // --color-blue-bright: #83a598;
+  // --color-purple: #b16286;
+  // --color-purple-bright: #d3869b;
+  // --color-aqua: #689d6a;
+  // --color-aqua-bright: #8ec07c;
+  // --color-gray: #928374;
+  // --color-gray-medium: #928374;
+  // --color-gray-bright: #a89984;
+  // --color-orange: #d65d0e;
+  // --color-orange-bright: #fe8019;
 
-  --font-size: 16px;
-  --text-color: var(--color-fg);
-  --page-width: 910px;
 }
 
+/**
+* THEME: EVERFOREST
+* URL: https://github.com/sainnhe/everforest
+*/
+
+$font-size: 16px;
+$page-width: 910px;
+$color-bg: #fdf6e3;
+$color-bg-1: #f4f0d9;
+$color-bg-2: #efebd4;
+$color-fg: #5c6a72;
+$color-statusline1: #93b259;
+$color-statusline2: #708089;
+$color-statusline3: #e66868;
+$color-gray-light: #a6b0a0;
+$color-gray-medium: #939f91;
+$color-gray-hard: #829181;
+$color-red: #f85552;
+$color-orange: #f57d26;
+$color-yellow: #dfa000;
+$color-green: #8da101;
+$color-blue: #3a94c5;
+$color-aqua: #35a77c;
+$color-purple: #df69ba;
+
+
 body {
-  background: var(--color-bg);
-  color: var(--text-color);
+  background: $color-bg;
+  color: $color-fg;
   line-height: 1.6;
   // font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
   // font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
   font-family: 'JetBrains Mono', monospace;
-  font-size: var(--font-size);
+  font-size: $font-size;
 }
 
 h1,
@@ -60,8 +83,9 @@ h5,
 h6 {
   line-height: 1.6;
   margin-bottom: 1rem;
-  font-size: var(--font-size);
-  color: var(--color-yellow-bright);
+  font-size: $font-size;
+  color: $color-green;
+  font-weight: normal;
 }
 
 h1 {
@@ -71,13 +95,11 @@ h1 {
 h2,
 h3 {
   padding-top: 1rem;
-  font-weight: 900;
   font-size: 1rem;
 }
 
 h4,
 h5 {
-  font-weight: 900;
   font-size: 1rem;
 }
 
@@ -87,26 +109,26 @@ pre {
 }
 
 a {
-  color: var(--color-gray-bright);
+  color: $color-blue;
 
   &:hover {
-    color: var(--color-fg-2);
+    color: lighten($color-blue, 10%);
   }
 
   &:before {
     content: "[";
-    color: var(--color-yellow-bright);
+    color: $color-fg;
   }
 
   &:after {
     content: "]";
-    color: var(--color-yellow-bright);
+    color: $color-fg;
   }
 }
 
 hr {
-  max-width: var(--page-width);
-  color: var(--color-pink);
+  max-width: $page-width;
+  color: $color-aqua;
   margin: 2rem auto 2rem auto;
   padding: 0 1rem;
 }
@@ -118,12 +140,8 @@ ul {
 
   & li:before {
     content: "*";
-    color: var(--color-gray);
+    color: $color-red;
     margin-right: .5rem;
-  }
-
-  li a {
-      color: inherit;
   }
 }
 
@@ -134,7 +152,7 @@ ol {
 }
 
 ul, ol {
-  color: var(--color-green);
+  color: $color-green;
   font-size: 1rem;
   padding-left: 0;
 }
@@ -159,11 +177,11 @@ table {
   width: 100%;
   max-width: 100%;
   border-collapse: collapse;
-  border: 1px solid var(--color-fg);
+  border: 1px solid $color-fg;
 
   td,
   th {
-    border: 1px solid var(--color-fg);
+    border: 1px solid $color-fg;
     padding: .5rem;
   }
 
@@ -177,16 +195,16 @@ table {
   }
 
   tr:nth-child(odd) td {
-    background: var(--color-bg-2);
+    background: $color-bg-2;
   }
 }
 
 // force a lighter background on gruvbox syntax theme
 .highlight {
-  background-color: var(--color-bg-1);
+  background-color: $color-bg-1;
 
   & * {
-    background-color: var(--color-bg-1) !important;
+    background-color: $color-bg-1 !important;
   }
 
   & .ln {
@@ -195,13 +213,13 @@ table {
 }
 
 code {
-    color: var(--color-orange-bright);
+    color: $color-orange;
 }
 
 .btn {
   display: inline-block;
   padding: 0.5rem 1.5rem;
-  border: 1px solid var(--color-light-blue);
+  border: 1px solid $color-blue;
   border-radius: 8px;
   text-decoration: none;
   font-size: 16px;
@@ -211,7 +229,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1rem;
-  max-width: var(--page-width);
+  max-width: $page-width;
   margin: 0 auto 3rem auto;
 }
 
@@ -230,11 +248,16 @@ header {
     text-decoration: none;
     cursor: pointer;
     align-self: center;
+    color: $color-orange;
+
+    &:hover {
+        color: lighten($color-orange, 10%);
+    }
   }
 }
 
 .container {
-  max-width: var(--page-width);
+  max-width: $page-width;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -243,7 +266,7 @@ header {
   &__title {
     margin-bottom: 1.5rem;
     font-size: 1rem;
-    color: var(--color-fg);
+    color: $color-fg;
   }
 }
 
@@ -257,10 +280,11 @@ header {
   margin: 0;
   padding: 0;
   font-size: 1rem;
+  font-weight: normal;
 }
 
 .post__title a {
-  color: var(--color-fg);
+  color: $color-fg;
   text-decoration: none;
   position: relative;
 
@@ -274,11 +298,11 @@ header {
   }
 
   & .hashtag {
-    color: var(--color-gray);
+    color: $color-red;
   }
 
   & .date {
-    color: var(--color-yellow-bright);
+    color: $color-green;
   }
 }
 
@@ -300,7 +324,7 @@ header {
   & h2 {
     &:before {
       content: "##";
-      color: var(--color-gray);
+      color: $color-red;
       top: 0;
       left: 0;
       margin-right: .5rem;
@@ -310,7 +334,7 @@ header {
   & h3 {
     &:before {
       content: "###";
-      color: var(--color-gray);
+      color: $color-red;
       top: 0;
       left: 0;
       margin-right: .5rem;
@@ -318,7 +342,7 @@ header {
   }
 
   & .post__meta {
-    color: var(--color-yellow-bright);
+    color: $color-purple;
   }
 }
 
@@ -328,7 +352,6 @@ header {
 
 .golang {
   color: black;
-  // background-color: #118ab2;
   background-color: #69d6e4;
 }
 
@@ -364,7 +387,7 @@ header {
   overflow: auto;
   word-wrap: normal;
   word-break: normal;
-  border: 1px solid var(--color-pink);
+  border: 1px solid $color-purple;
   border-radius: 8px;
 }
 
