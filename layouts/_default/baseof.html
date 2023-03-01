@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}</title>
-    <meta
-      name="title"
-      content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}"
-    />
+    <meta name="title"
+        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}" />
 
     <!-- Open Graph / Facebook -->
-    <meta
-      property="og:title"
-      content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}"
-    />
-    <meta
-      property="og:description"
-      content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}"
-    />
-    <meta
-      property="og:site_name"
-      content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}"
-    />
+    <meta property="og:title"
+        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}" />
+    <meta property="og:description"
+        content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}" />
+    <meta property="og:site_name"
+        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:image" content="/android-chrome-512x512.png" />
@@ -33,14 +26,10 @@
     <meta name="twitter:site" content="@dotpwsh" />
     <meta name="twitter:creator" content="@dotpwsh" />
     <meta name="twitter:url" content="{{ .Permalink }}" />
-    <meta
-      name="twitter:title"
-      content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}"
-    />
-    <meta
-      name="twitter:description"
-      content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}"
-    />
+    <meta name="twitter:title"
+        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}" />
+    <meta name="twitter:description"
+        content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}" />
     <link rel="canonical" href="{{ .Permalink }}" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -56,27 +45,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/stylesheets/main.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <h1 class="page-title"># {{ .Site.Title }}</h1>
+        <h1 class="page-title"># {{ .Site.Title }}</h1>
 
-      <nav class="main-nav">
-        <a class="main-nav__item" href="/">Enter-Home</a>
-        <a class="main-nav__item" href="/bookmarks">Get-Bookmarks</a>
-        <a class="main-nav__item" href="/about">Show-About</a>
-      </nav>
+        <nav class="main-nav">
+            <a class="main-nav__item" href="/">Enter-Home</a>
+            <a class="main-nav__item" href="/bookmarks">Get-Bookmarks</a>
+            <a class="main-nav__item" href="/about">Show-About</a>
+        </nav>
     </header>
 
     {{ block "main" . }} {{ end }}
 
     <footer>
-      <p>Copyright &copy; {{ now.Format "2006" }} - {{ .Site.Params.OwnerName }}</p>
-      <p>
-        Powered by <a href="https://gohugo.io">Hugo</a> and
-        <a href="https://netlify.com">Netlify</a>
-      </p>
+        <p>Copyright &copy; {{ now.Format "2006" }} - {{ .Site.Params.OwnerName }}</p>
+        <p>
+            Powered by <a href="https://gohugo.io">Hugo</a> and
+            <a href="https://netlify.com">Netlify</a>
+            <br />
+            Colors are inspired by the fantastic <a href="https://github.com/sainnhe/everforest">sainnhe/everforest</a>
+            light theme
+        </p>
     </footer>
-  </body>
+</body>
+
 </html>
