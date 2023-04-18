@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -519,7 +520,7 @@ body {
   background: #fdf6e3;
   color: #5c6a72;
   line-height: 1.6;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 16px;
 }
 
@@ -529,26 +530,38 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.6;
+  line-height: 1.875;
   margin-bottom: 1rem;
   font-size: 16px;
   color: #8da101;
-  font-weight: normal;
+  font-weight: bold;
+  font-style: italic;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.625rem;
 }
 
-h2,
+h2 {
+  padding-top: 1rem;
+  font-size: 2.0625rem;
+}
+
 h3 {
   padding-top: 1rem;
+  font-size: 1.625rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
   font-size: 1rem;
 }
 
-h4,
-h5 {
-  font-size: 1rem;
+h6 {
+  font-size: 0.8125rem;
 }
 
 p,
@@ -653,6 +666,23 @@ code {
   color: #f57d26;
 }
 
+blockquote {
+  padding: 1.2rem 1rem;
+  background: #708089;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+blockquote * {
+  color: #fdf6e3 !important;
+}
+blockquote ul li:before {
+  content: "";
+  margin-right: 0;
+}
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+
 .btn {
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -671,6 +701,7 @@ header {
 }
 
 .page-title {
+  font-weight: normal;
   margin-bottom: 0;
 }
 
@@ -714,6 +745,7 @@ header {
   padding: 0;
   font-size: 1rem;
   font-weight: normal;
+  font-style: normal;
 }
 
 .post__title a {
@@ -748,14 +780,7 @@ header {
 }
 
 .single-post h2:before {
-  content: "##";
-  color: #f85552;
-  top: 0;
-  left: 0;
-  margin-right: 0.5rem;
-}
-.single-post h3:before {
-  content: "###";
+  content: "#";
   color: #f85552;
   top: 0;
   left: 0;
@@ -763,6 +788,7 @@ header {
 }
 .single-post .post__meta {
   color: #df69ba;
+  font-style: italic;
 }
 
 .post__meta {
@@ -814,6 +840,10 @@ code[class*=language-],
 pre[class*=language-] {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1rem;
+}
+
+.footnotes p {
+  display: inline;
 }
 
 footer {
