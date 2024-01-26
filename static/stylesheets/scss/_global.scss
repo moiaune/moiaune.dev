@@ -2,42 +2,42 @@
 
 :root {
 
-  /*
+    /*
    * THEME: GRUVBOX
    * URL: https://github.com/morhetz/gruvbox
    */
 
-  // --color-bg: #282828;
-  // --color-bg-0h: #1d2021;
-  // --color-bg-1: #3c3836;
-  // --color-bg-2: #504945;
-  // --color-bg-3: #665c54;
-  // --color-bg-4: #7c6f64;
+    // --color-bg: #282828;
+    // --color-bg-0h: #1d2021;
+    // --color-bg-1: #3c3836;
+    // --color-bg-2: #504945;
+    // --color-bg-3: #665c54;
+    // --color-bg-4: #7c6f64;
 
-  // --color-fg: #ebdbb2;
-  // --color-fg-0: #fbf1c7;
-  // --color-fg-1: #ebdbb2;
-  // --color-fg-2: #d5c4a1;
-  // --color-fg-3: #bdae93;
-  // --color-fg-4: #a89984;
+    // --color-fg: #ebdbb2;
+    // --color-fg-0: #fbf1c7;
+    // --color-fg-1: #ebdbb2;
+    // --color-fg-2: #d5c4a1;
+    // --color-fg-3: #bdae93;
+    // --color-fg-4: #a89984;
 
-  // --color-red: #cc241d;
-  // --color-red-bright: #fb4934;
-  // --color-green: #98971a;
-  // --color-green-bright: #b8bb26;
-  // --color-yellow: #d79921;
-  // --color-yellow-bright: #fabd2f;
-  // --color-blue: #458588;
-  // --color-blue-bright: #83a598;
-  // --color-purple: #b16286;
-  // --color-purple-bright: #d3869b;
-  // --color-aqua: #689d6a;
-  // --color-aqua-bright: #8ec07c;
-  // --color-gray: #928374;
-  // --color-gray-medium: #928374;
-  // --color-gray-bright: #a89984;
-  // --color-orange: #d65d0e;
-  // --color-orange-bright: #fe8019;
+    // --color-red: #cc241d;
+    // --color-red-bright: #fb4934;
+    // --color-green: #98971a;
+    // --color-green-bright: #b8bb26;
+    // --color-yellow: #d79921;
+    // --color-yellow-bright: #fabd2f;
+    // --color-blue: #458588;
+    // --color-blue-bright: #83a598;
+    // --color-purple: #b16286;
+    // --color-purple-bright: #d3869b;
+    // --color-aqua: #689d6a;
+    // --color-aqua-bright: #8ec07c;
+    // --color-gray: #928374;
+    // --color-gray-medium: #928374;
+    // --color-gray-bright: #a89984;
+    // --color-orange: #d65d0e;
+    // --color-orange-bright: #fe8019;
 
 }
 
@@ -46,36 +46,58 @@
 * URL: https://github.com/sainnhe/everforest
 */
 
+// $font-size: 16px;
+// $page-width: 910px;
+// $color-fg: #5c6a72;
+// $color-bg: #fdf6e3;
+// $color-bg-1: #f4f0d9;
+// $color-bg-2: #efebd4;
+// $color-statusline1: #93b259;
+// $color-statusline2: #708089;
+// $color-statusline3: #e66868;
+// $color-gray-light: #a6b0a0;
+// $color-gray-medium: #939f91;
+// $color-gray-hard: #829181;
+// $color-red: #f85552;
+// $color-orange: #f57d26;
+// $color-yellow: #dfa000;
+// $color-green: #8da101;
+// $color-blue: #3a94c5;
+// $color-aqua: #35a77c;
+// $color-purple: #df69ba;
+
+/** THEME: Inspired by JustBlack **/
 $font-size: 16px;
 $page-width: 910px;
-$color-bg: #fdf6e3;
-$color-bg-1: #f4f0d9;
-$color-bg-2: #efebd4;
-$color-fg: #5c6a72;
-$color-statusline1: #93b259;
-$color-statusline2: #708089;
-$color-statusline3: #e66868;
-$color-gray-light: #a6b0a0;
-$color-gray-medium: #939f91;
-$color-gray-hard: #829181;
-$color-red: #f85552;
-$color-orange: #f57d26;
-$color-yellow: #dfa000;
-$color-green: #8da101;
-$color-blue: #3a94c5;
-$color-aqua: #35a77c;
-$color-purple: #df69ba;
+$color-fg: #F2F2F2;
+$color-bg: #000000;
+$color-black: #000000;
+$color-red: #FF3B3B;
+$color-green: #7FFF00;
+$color-yellow: #FFFF00;
+$color-blue: #0077FF;
+$color-purple: #BB77FF;
+$color-cyan: #7EFFFF;
+$color-white: #F2F2F2;
 
+$color-black-light: #000000;
+$color-red-light: #FF3B3B;
+$color-green-light: #7FFF00;
+$color-yellow-light: #FC6A0F;
+$color-blue-light: #0077FF;
+$color-purple-light: #BB77FF;
+$color-cyan-light: #7EFFFF;
+$color-white-light: #F2F2F2;
 
 body {
-  background: $color-bg;
-  color: $color-fg;
-  line-height: 1.687;
-  // font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
-  // font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-  // font-family: 'JetBrains Mono', monospace;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: $font-size;
+    background: $color-bg;
+    color: $color-fg;
+    line-height: 1.687;
+    // font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+    // font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-family: 'Monaco', 'JetBrains Mono', 'Courier New', 'Courier', monospace;
+    // font-family: 'IBM Plex Mono', monospace;
+    font-size: $font-size;
 }
 
 h1,
@@ -84,25 +106,25 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 1rem;
-  font-size: $font-size;
-  color: $color-green;
-  font-weight: bold;
-  font-style: italic;
+    margin-bottom: 1rem;
+    font-size: $font-size;
+    color: $color-green;
+    font-weight: bold;
+    font-style: italic;
 }
 
 h1 {
-  font-size: 2.625rem;
+    font-size: 2.625rem;
 }
 
 h2 {
-  padding-top: 1rem;
-  font-size: 2.0625rem;
+    padding-top: 1rem;
+    font-size: 2.0625rem;
 }
 
 h3 {
-  padding-top: 1rem;
-  font-size: 1.625rem;
+    padding-top: 1rem;
+    font-size: 1.625rem;
 }
 
 h4 {
@@ -110,7 +132,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 h6 {
@@ -119,125 +141,135 @@ h6 {
 
 p,
 pre {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+pre {
+    border: 1px solid $color-purple;
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 a {
-  color: $color-blue;
+    color: $color-blue;
 
-  &:hover {
-    color: lighten($color-blue, 10%);
-  }
+    &:hover {
+        color: $color-cyan;
+    }
 
-  &:before {
-    content: "[";
-    color: $color-fg;
-  }
+    &:before {
+        content: "[";
+        color: $color-fg;
+    }
 
-  &:after {
-    content: "]";
-    color: $color-fg;
-  }
+    &:after {
+        content: "]";
+        color: $color-fg;
+    }
 }
 
 hr {
-  max-width: $page-width;
-  color: $color-aqua;
-  margin: 2rem auto 2rem auto;
-  padding: 0 1rem;
+    max-width: $page-width;
+    color: $color-cyan;
+    margin: 2rem auto 2rem auto;
+    padding: 0 1rem;
 }
 
 ul {
-  list-style: none;
-  list-style-position: inside;
-  margin-bottom: 1.5rem;
+    list-style: none;
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
 
-  & li:before {
-    content: "*";
-    color: $color-red;
-    margin-right: .5rem;
-  }
+    & li:before {
+        content: "*";
+        color: $color-red;
+        margin-right: .5rem;
+    }
 }
 
 ol {
-  list-style-type: decimal;
-  list-style-position: inside;
-  margin-bottom: 1.5rem;
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
 }
 
-ul, ol {
-  color: $color-green;
-  font-size: 1rem;
-  padding-left: 0;
+ul,
+ol {
+    color: $color-fg;
+    font-size: 1rem;
+    padding-left: 1.5rem;
 }
 
 ul ul,
 ol ul {
-  list-style-type: circle;
-  list-style-position: inside;
-  margin-left: 1rem;
-  margin-bottom: 0;
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-left: 1rem;
+    margin-bottom: 0;
 }
 
 ol ol,
 ul ol {
-  list-style-type: lower-latin;
-  list-style-position: inside;
-  margin-left: 1rem;
-  margin-bottom: 0;
+    list-style-type: lower-latin;
+    list-style-position: inside;
+    margin-left: 1rem;
+    margin-bottom: 0;
 }
 
 table {
-  width: 100%;
-  max-width: 100%;
-  border-collapse: collapse;
-  border: 1px solid $color-fg;
-
-  td,
-  th {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
     border: 1px solid $color-fg;
-    padding: .5rem;
-  }
 
-  tr:first-child th {
-    border-top-style: solid;
-  }
+    td,
+    th {
+        border: 1px solid $color-fg;
+        padding: .5rem;
+    }
 
-  tr td:first-child,
-  tr th:first-child {
-    border-left-style: solid;
-  }
+    tr:first-child th {
+        border-top-style: solid;
+    }
 
-  tr:nth-child(odd) td {
-    background: $color-bg-2;
-  }
+    tr td:first-child,
+    tr th:first-child {
+        border-left-style: solid;
+    }
+
+    tr:nth-child(odd) td {
+        background: lighten($color-bg, 20%);
+    }
 }
 
 // force a lighter background on gruvbox syntax theme
 .highlight {
-  background-color: $color-bg-1;
+    background-color: lighten($color-bg, 10%);
 
-  & * {
-    background-color: $color-bg-1 !important;
-  }
+    & * {
+        background-color: lighten($color-bg, 10%) !important;
+    }
 
-  & .ln {
-      margin-right: 1rem;
-  }
+    & .ln {
+        margin-right: 1rem;
+    }
 }
 
 code {
-    color: $color-orange;
+    font-size: $font-size - 2px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    color: $color-fg;
 }
 
 blockquote {
     padding: 1.2rem 1rem;
-    background: $color-statusline2;
+    background: $color-bg;
     margin-bottom: 1.5rem;
     border-radius: 8px;
+    border-left: 5px solid $color-green;
 
     & * {
-        color: $color-bg !important;
+        color: $color-fg !important;
     }
 
     & ul li:before {
@@ -251,177 +283,186 @@ blockquote {
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid $color-blue;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid $color-blue;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1rem;
-  max-width: $page-width;
-  margin: 0 auto 3rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    max-width: $page-width;
+    margin: 0 auto 3rem auto;
 }
 
 .page-title {
-  font-weight: normal;
-  margin-bottom: 0;
+    font-weight: normal;
+    margin-bottom: 0;
+
+    &::before {
+        content: "#";
+        color: $color-red;
+        top: 0;
+        left: 0;
+        margin-right: .5rem;
+    }
 }
 
 .main-nav {
-  display: flex;
-  justify-content: end;
-  column-gap: .5rem;
+    display: flex;
+    justify-content: end;
+    column-gap: .5rem;
 
-  &__item {
-    display: inline-block;
-    padding: 0.5rem .5rem;
-    text-decoration: none;
-    cursor: pointer;
-    align-self: center;
-    color: $color-orange;
+    &__item {
+        display: inline-block;
+        padding: 0.5rem .5rem;
+        text-decoration: none;
+        cursor: pointer;
+        align-self: center;
+        color: $color-yellow-light;
 
-    &:hover {
-        color: lighten($color-orange, 10%);
+        &:hover {
+            color: lighten($color-yellow-light, 10%);
+        }
     }
-  }
 }
 
 .container {
-  max-width: $page-width;
-  margin: 0 auto;
-  padding: 0 1rem;
+    max-width: $page-width;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .introduction {
-  &__title {
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    color: $color-fg;
-  }
+    &__title {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        color: $color-fg;
+    }
 }
 
 .post-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-evenly;
 }
 
 .post__title {
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  font-weight: normal;
-  font-style: normal;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .post__title a {
-  color: $color-fg;
-  text-decoration: none;
-  position: relative;
+    color: $color-fg;
+    text-decoration: none;
+    position: relative;
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+        text-decoration: underline;
+    }
 
-  &:before,
-  &:after {
-    content: "";
-  }
+    &:before,
+    &:after {
+        content: "";
+    }
 
-  & .hashtag {
-    color: $color-red;
-  }
+    & .hashtag {
+        color: $color-red;
+    }
 
-  & .date {
-    color: $color-green;
-  }
+    & .date {
+        color: $color-green;
+    }
 }
 
 .post__categories {
-  list-style: none;
-  display: flex;
-  column-gap: 0.5rem;
-  margin-bottom: 1rem;
-  padding-left: 0;
+    list-style: none;
+    display: flex;
+    column-gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
 }
 
 .post__categories-item {
-  font-size: 14px;
-  padding: 0.1rem 0.5rem;
+    font-size: 14px;
+    padding: 0.1rem 0.5rem;
 }
 
 .single-post {
 
-  & h2 {
-    &:before {
-      content: "#";
-      color: $color-red;
-      top: 0;
-      left: 0;
-      margin-right: .5rem;
+    & h2 {
+        &:before {
+            content: "#";
+            color: $color-red;
+            top: 0;
+            left: 0;
+            margin-right: .5rem;
+        }
     }
-  }
 
-  & .post__meta {
-    color: $color-purple;
-    font-style: italic;
-  }
+    & .post__meta {
+        color: $color-purple;
+        font-style: italic;
+    }
 }
 
 .post__meta {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .golang {
-  color: black;
-  background-color: #69d6e4;
+    color: black;
+    background-color: #69d6e4;
 }
 
 .powershell {
-  color: white;
-  background-color: #073b4c;
+    color: white;
+    background-color: #073b4c;
 }
 
 .windows {
-  color: black;
-  background-color: #43aa8b;
+    color: black;
+    background-color: #43aa8b;
 }
 
 .azure {
-  background-color: #3a86ff;
-  color: white;
+    background-color: #3a86ff;
+    color: white;
 }
 
 .javascript {
-  background-color: #ffd166;
-  color: black;
+    background-color: #ffd166;
+    color: black;
 }
 
 .servicenow {
-  background-color: #264653;
-  color: #ffffff;
+    background-color: #264653;
+    color: #ffffff;
 }
 
 .highlight pre {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  overflow: auto;
-  word-wrap: normal;
-  word-break: normal;
-  border: 1px solid $color-purple;
-  border-radius: 8px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    overflow: auto;
+    word-wrap: normal;
+    word-break: normal;
+    border: 1px solid $color-purple;
+    border-radius: 8px;
 }
 
 code[class*='language-'],
 pre[class*='language-'] {
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 1rem;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    // font-size: 1rem;
+    font-size: $font-size - 2px;
 }
 
 .footnotes p {
@@ -429,41 +470,41 @@ pre[class*='language-'] {
 }
 
 footer {
-  text-align: center;
-  padding: 5.5rem 1rem 4rem 1rem;
+    text-align: center;
+    padding: 5.5rem 1rem 4rem 1rem;
 }
 
 @media only screen and (max-width: 925px) {
-  header {
-    grid-template-columns: 1fr;
-  }
+    header {
+        grid-template-columns: 1fr;
+    }
 
-  hr {
-    margin: 0.5rem 1rem 2rem 1rem;
-  }
+    hr {
+        margin: 0.5rem 1rem 2rem 1rem;
+    }
 
-  .container {
-    padding: 0 1.5rem;
-  }
+    .container {
+        padding: 0 1.5rem;
+    }
 
-  .page-title {
-    text-align: center;
-  }
+    .page-title {
+        text-align: center;
+    }
 
-  .main-nav {
-    justify-content: center;
-  }
+    .main-nav {
+        justify-content: center;
+    }
 
-  .introduction {
-    grid-template-columns: 1fr;
-  }
+    .introduction {
+        grid-template-columns: 1fr;
+    }
 
-  .post-list {
-    grid-template-columns: 1fr;
-    row-gap: 1rem;
-  }
+    .post-list {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
 
-  .single-post h1 {
-      font-size: 2rem;
-  }
+    .single-post h1 {
+        font-size: 2rem;
+    }
 }
