@@ -69,25 +69,25 @@
 /** THEME: Inspired by JustBlack **/
 $font-size: 16px;
 $page-width: 910px;
-$color-fg: #F2F2F2;
-$color-bg: #000000;
+$color-fg: #0C0C0D;
+$color-bg: #FFFFFF;
 $color-black: #000000;
-$color-red: #FF3B3B;
-$color-green: #7FFF00;
-$color-yellow: #FFFF00;
-$color-blue: #0077FF;
-$color-purple: #BB77FF;
-$color-cyan: #7EFFFF;
-$color-white: #F2F2F2;
+$color-red: #D70222;
+$color-green: #2F9624;
+$color-yellow: #BE9B00;
+$color-blue: #0060DF;
+$color-purple: #7F1BD7;
+$color-cyan: #0074E8;
+$color-white: #FFFFFF;
 
 $color-black-light: #000000;
-$color-red-light: #FF3B3B;
-$color-green-light: #7FFF00;
-$color-yellow-light: #FC6A0F;
-$color-blue-light: #0077FF;
-$color-purple-light: #BB77FF;
-$color-cyan-light: #7EFFFF;
-$color-white-light: #F2F2F2;
+$color-red-light: #FCF2F5;
+$color-green-light: #19C117;
+$color-yellow-light: #FEFBD6;
+$color-blue-light: #0060DF;
+$color-purple-light: #7F1BD7;
+$color-cyan-light: #0074E8;
+$color-white-light: #FFFFFF;
 
 body {
     background: $color-bg;
@@ -323,7 +323,7 @@ header {
         text-decoration: none;
         cursor: pointer;
         align-self: center;
-        color: $color-yellow-light;
+        color: $color-purple;
 
         &:hover {
             color: lighten($color-yellow-light, 10%);

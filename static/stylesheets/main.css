@@ -365,8 +365,8 @@ span.linenos.special {
 */
 /** THEME: Inspired by JustBlack **/
 body {
-  background: #000000;
-  color: #F2F2F2;
+  background: #FFFFFF;
+  color: #0C0C0D;
   line-height: 1.687;
   font-family: "Monaco", "JetBrains Mono", "Courier New", "Courier", monospace;
   font-size: 16px;
@@ -380,7 +380,7 @@ h5,
 h6 {
   margin-bottom: 1rem;
   font-size: 16px;
-  color: #7FFF00;
+  color: #2F9624;
   font-weight: bold;
   font-style: italic;
 }
@@ -417,29 +417,29 @@ pre {
 }
 
 pre {
-  border: 1px solid #BB77FF;
+  border: 1px solid #7F1BD7;
   padding: 1rem;
   border-radius: 8px;
 }
 
 a {
-  color: #0077FF;
+  color: #0060DF;
 }
 a:hover {
-  color: #7EFFFF;
+  color: #0074E8;
 }
 a:before {
   content: "[";
-  color: #F2F2F2;
+  color: #0C0C0D;
 }
 a:after {
   content: "]";
-  color: #F2F2F2;
+  color: #0C0C0D;
 }
 
 hr {
   max-width: 910px;
-  color: #7EFFFF;
+  color: #0074E8;
   margin: 2rem auto 2rem auto;
   padding: 0 1rem;
 }
@@ -451,7 +451,7 @@ ul {
 }
 ul li:before {
   content: "*";
-  color: #FF3B3B;
+  color: #D70222;
   margin-right: 0.5rem;
 }
 
@@ -463,7 +463,7 @@ ol {
 
 ul,
 ol {
-  color: #F2F2F2;
+  color: #0C0C0D;
   font-size: 1rem;
   padding-left: 1.5rem;
 }
@@ -488,11 +488,11 @@ table {
   width: 100%;
   max-width: 100%;
   border-collapse: collapse;
-  border: 1px solid #F2F2F2;
+  border: 1px solid #0C0C0D;
 }
 table td,
 table th {
-  border: 1px solid #F2F2F2;
+  border: 1px solid #0C0C0D;
   padding: 0.5rem;
 }
 table tr:first-child th {
@@ -503,14 +503,14 @@ table tr th:first-child {
   border-left-style: solid;
 }
 table tr:nth-child(odd) td {
-  background: #333333;
+  background: white;
 }
 
 .highlight {
-  background-color: #1a1a1a;
+  background-color: white;
 }
 .highlight * {
-  background-color: #1a1a1a !important;
+  background-color: white !important;
 }
 .highlight .ln {
   margin-right: 1rem;
@@ -519,18 +519,18 @@ table tr:nth-child(odd) td {
 code {
   font-size: 14px;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  color: #F2F2F2;
+  color: #0C0C0D;
 }
 
 blockquote {
   padding: 1.2rem 1rem;
-  background: #000000;
+  background: #FFFFFF;
   margin-bottom: 1.5rem;
   border-radius: 8px;
-  border-left: 5px solid #7FFF00;
+  border-left: 5px solid #2F9624;
 }
 blockquote * {
-  color: #F2F2F2 !important;
+  color: #0C0C0D !important;
 }
 blockquote ul li:before {
   content: "";
@@ -543,7 +543,7 @@ blockquote *:last-child {
 .btn {
   display: inline-block;
   padding: 0.5rem 1.5rem;
-  border: 1px solid #0077FF;
+  border: 1px solid #0060DF;
   border-radius: 8px;
   text-decoration: none;
   font-size: 16px;
@@ -563,7 +563,7 @@ header {
 }
 .page-title::before {
   content: "#";
-  color: #FF3B3B;
+  color: #D70222;
   top: 0;
   left: 0;
   margin-right: 0.5rem;
@@ -580,10 +580,10 @@ header {
   text-decoration: none;
   cursor: pointer;
   align-self: center;
-  color: #FC6A0F;
+  color: #7F1BD7;
 }
 .main-nav__item:hover {
-  color: #fd8941;
+  color: white;
 }
 
 .container {
@@ -595,7 +595,7 @@ header {
 .introduction__title {
   margin-bottom: 1.5rem;
   font-size: 1rem;
-  color: #F2F2F2;
+  color: #0C0C0D;
 }
 
 .post-list {
@@ -613,7 +613,7 @@ header {
 }
 
 .post__title a {
-  color: #F2F2F2;
+  color: #0C0C0D;
   text-decoration: none;
   position: relative;
 }
@@ -624,10 +624,10 @@ header {
   content: "";
 }
 .post__title a .hashtag {
-  color: #FF3B3B;
+  color: #D70222;
 }
 .post__title a .date {
-  color: #7FFF00;
+  color: #2F9624;
 }
 
 .post__categories {
@@ -645,13 +645,13 @@ header {
 
 .single-post h2:before {
   content: "#";
-  color: #FF3B3B;
+  color: #D70222;
   top: 0;
   left: 0;
   margin-right: 0.5rem;
 }
 .single-post .post__meta {
-  color: #BB77FF;
+  color: #7F1BD7;
   font-style: italic;
 }
 
@@ -696,7 +696,7 @@ header {
   overflow: auto;
   word-wrap: normal;
   word-break: normal;
-  border: 1px solid #BB77FF;
+  border: 1px solid #7F1BD7;
   border-radius: 8px;
 }
 
