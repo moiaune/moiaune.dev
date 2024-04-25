@@ -13,7 +13,7 @@ PygmentsStyle = "fruity"
 
 [params]
   OwnerName = "Mads Moi-Aune"
-  Twitter = "kapteindev"
+  Twitter = "moiaune"
 
 [permalinks]
   posts = "/:year/:month/:day/:title/"
