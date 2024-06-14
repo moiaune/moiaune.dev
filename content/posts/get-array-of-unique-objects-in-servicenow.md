@@ -23,3 +23,31 @@ function uniqueObjects(arr, key) {
     });
 }
 ```
+
+Here's a example from a fresh developer instance.
+
+```javascript
+var managers = [];
+var gr = new GlideRecord('sys_user');
+gr.addActiveQuery();
+gr.addNotNullQuery('manager');
+gr.query();
+
+while(gr.next()) {
+    var managerId = gr.getValue('manager');
+    var managerUsername = gr.manager.user_name.getValue();
+    managers.push({
+        userId: managerId,
+        username: managerUsername,
+    });
+}
+
+var uniqueManagers = uniqueObjects(managers, 'userId');
+
+gs.print(managers.length);
+gs.print(uniqueManagers.length);
+
+// ---------- OUTPUT ----------
+// *** Script: 13
+// *** Script: 11
+```
