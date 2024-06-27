@@ -24,10 +24,10 @@ openssl ec -in private.pem -pubout -out public.pem
 The `ImportECPrivateKey` method expects the key without the header, footer and as decoded base64 byte[].
 
 ```powershell
-$key = Get-Content private.pem
-$key = $key.Replace("-----BEGIN EC PRIVATE KEY-----", "")
-$key = $key.Replace("-----END EC PRIVATE KEY-----", "")
-$decoded = [System.Convert]::FromBase64String($key)
+$privkey = Get-Content private.pem
+$privkey = $key.Replace("-----BEGIN EC PRIVATE KEY-----", "")
+$privkey = $key.Replace("-----END EC PRIVATE KEY-----", "")
+$privkey_decoded = [System.Convert]::FromBase64String($key)
 ```
 
 ## 3. Import ECDSA private key
@@ -35,8 +35,8 @@ $decoded = [System.Convert]::FromBase64String($key)
 Let's import our decoded private key.
 
 ```powershell
-$ecdsa = [System.Security.Cryptography.ECDsa]::Create()
-$ecdsa.ImportECPrivateKey($decoded, [ref]$null)
+$sender = [System.Security.Cryptography.ECDsa]::Create()
+$sender.ImportECPrivateKey($privkey_decoded, [ref]$null)
 ```
 
 ## 4. Sign data
@@ -49,12 +49,24 @@ $bytes = [System.Text.Encoding]::UTF8.GetBytes($data)
 $signed_data = $ecdsa.SignData($bytes, [System.Security.Cryptography.HashAlgorithmName]::SHA256)
 ```
 
-## 5. Verify data
+## 5. Import public key
+
+```powershell
+$pubkey = Get-Content public.pem
+$pubkey.Replace("-----BEGIN PUBLIC KEY-----", "")
+$pubkey.Replace("-----END PUBLIC KEY-----", "")
+$pubkey_decoded = [System.Convert]::FromBase64String($pubkey)
+
+$receiver = [System.Security.Cryptography.ECDsa]::Create()
+$receiver.ImportSubjectPublicKeyInfo($pubkey_decoded, [ref]$null)
+```
+
+## 6. Verify data
 
 We can verify that the data has not been tampered with by comparing the original data and the signed data using our key. This would typically be done on the "other" side using our public key.
 
 ```powershell
-$ecdsa.VerifyData($bytes, $signed_data, [System.Security.Cryptography.HashAlgorithmName]::SHA256)
+$receiver.VerifyData($bytes, $signed_data, [System.Security.Cryptography.HashAlgorithmName]::SHA256)
 ```
 
 This should print "True" to the console.
