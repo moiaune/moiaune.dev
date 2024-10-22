@@ -6,6 +6,7 @@ draft: false
 
 Lately, I've been setting up an Azure Function App with a custom handler written in Go. One of my functions needs to download a file from an external URL and then upload that file to Azure Blob Storage. Unfortunately, neither the documentation on Microsoft Learn or the examples on Github mentions how to use Blob Storage as output binding for custom handlers. So I decided to do a little write up on how I solved it.
 
+<!--more-->
 
 There are two types of files that you can upload:
 
@@ -121,5 +122,3 @@ func DownloadHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write(response)
 }
 ```
-
-

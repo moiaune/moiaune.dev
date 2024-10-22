@@ -8,6 +8,8 @@ draft: false
 
 For years I've been a fan of the linux bash, with easy support for ssh-keys, colorized directory listings and git info the prompt. But at the same time, I really love Powershell. I have finally found some usefull Powershell modules that has made me switch completly to Powershell in the terminal.
 
+<!--more-->
+
 ## Colorized Directory Listings
 
 The first module I'm going to introduce is the **Get-ChildItemColor** module by Joon Ro ([github.com/joonro/Get-ChildItemColor](https://github.com/joonro/Get-ChildItemColor)).

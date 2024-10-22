@@ -6,6 +6,8 @@ draft: false
 
 In this article we're going to look at how you can setup git to work with multiple Github accounts and SSH.
 
+<!--more-->
+
 ### Generate SSH keys
 
 Github only allows you to use the same SSH key for one account, therefor if you have multiple accounts (e.g personal and work) you must generate two different SSH key pairs.

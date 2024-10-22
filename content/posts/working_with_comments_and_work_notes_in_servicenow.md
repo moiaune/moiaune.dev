@@ -8,6 +8,8 @@ draft: false
 
 Additional comments and Work notes is of type `Journal List` and therefor we can not get their value directly. So here's how to interact with `comments` and `work_notes`.
 
+<!--more-->
+
 ```javascript
 (function(current) {
 

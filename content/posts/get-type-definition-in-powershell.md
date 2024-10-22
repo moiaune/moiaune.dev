@@ -8,6 +8,8 @@ draft: false
 
 Today I went back to some Powershell scripting with the Az module and it frustrated me that I wasn't easily able to know what properties `Get-AzADGroup` (or any of the other Az cmdlets) returned to me without actually invoking the cmdlet. E.g I dont want to invoke `New-AzADGroup` just to be able to see what properties it will give me so I can use that in my script. Previously I've relied on IntelliSens in my editor, but it often fails, so I sought out to find a more manual solution (who would have thought..).
 
+<!--more-->
+
 Some modules provide information in their help about what type a particular cmdlet returns. We can use this to get information about what that type contains.
 
 If we look at the `Get-AzADGroup` cmdlet as an example. When we run `Get-Help Get-AzADGroup -Full` we can see under the "OUTPUT" section that it returns a `Microsoft.Azure.Commands.ActiveDirectory.PSADGroup` type. To inspect that type we can do the following.

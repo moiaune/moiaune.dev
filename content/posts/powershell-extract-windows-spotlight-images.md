@@ -8,6 +8,8 @@ draft: false
 
 A very nice feature of Windows 10 is Windows Spotlight who serves beautiful wallpapers on your lock screen every day. It’s a shame these beautiful images are hidden in a system folder somewhere in Windows, so today I’m going to show you how you can extract these images with Powershell. You could perfectly do this manually, but since these images change periodically (haven’t found any info on when) its much easier to just run a script. Personally I run this script as a scheduled job everyday.
 
+<!--more-->
+
 So here’s the script:
 
 ```powershell

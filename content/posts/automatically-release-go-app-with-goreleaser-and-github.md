@@ -8,6 +8,8 @@ draft: true
 
 One of the biggest benefits of Go is that you can distribute your application as a single binary and it's pretty simple for Go programmers to install any Go app using `go install`. But most times you also want to provide a way for non-Go users to download your application, so in this post we're going to take a look at how you automatically can publish a new release on Github with GoReleaser that will include your binary.
 
+<!--more-->
+
 ## What is GoReleaser?
 
 - brief introduction

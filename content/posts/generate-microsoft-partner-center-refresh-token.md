@@ -7,6 +7,8 @@ draft: false
 
 Microsoft Partner Center is a portal where you can manage all of your CSP customers and can give you a lot of access and power to do so. Therefor you should naturally have great security on the users that has access to this portal. Like MFA for example.
 
+<!--more-->
+
 Hopefully you have MFA enabled on all your Partner Center users, as you should. But MFA does not work great with unattended authentication, like in scripts for example. So how can we then do unattended authentication and automate some of the tasks in Partner Center?
 
 In the Partner Center you can create something they call "Web apps" or "Native apps", which works like a service principal, but they will not give you access to your customers data. For that, you will need to authenticate as a Partner Center user that has either "Admin agent", "Sales agent" or "Helpdesk agent" (depending on access level) in addition to using an Azure service principal. They call this "App + User authentication".

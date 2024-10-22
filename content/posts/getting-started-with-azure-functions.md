@@ -8,6 +8,8 @@ draft: false
 
 Azure Functions is one of Microsofts serverless services that you can setup in Azure. Being serverless means that you dont have to worry about the infrastructure and environment behind it and you will only pay for the capacity that you actually use when the function is running. Traditionally you would have a server that runs 24/7 and consume capacity. Very simplified, serverless will spin up and down as requests comes in. This means that you only have to focus on the code it should run.
 
+<!--more-->
+
 ## Prerequisites
 
 1. An Azure Subscription

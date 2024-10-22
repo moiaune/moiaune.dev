@@ -49,29 +49,19 @@
 </head>
 
 <body>
-    <header>
-        <h1 class="page-title">{{ .Site.Title }}</h1>
+    <main id="main-content">
+        <div class="page-content">
+            <header>
+                <a href="/">
+                    <img class="avatar" src="/images/avatar2.jpg" alt="Avatar" size="50x50" />
+                    <p>Mads Moi-Aune</p>
+                </a>
+            </header>
 
-        <nav class="main-nav">
-            <a class="main-nav__item" href="/">Enter-Home</a>
-            <a class="main-nav__item" href="/bookmarks">Get-Bookmarks</a>
-            <a class="main-nav__item" href="/about">Show-About</a>
-        </nav>
-    </header>
+            {{ block "main" . }} {{ end }}
 
-    {{ block "main" . }} {{ end }}
-
-    <footer>
-        <p>Copyright &copy; {{ now.Format "2006" }} - {{ .Site.Params.OwnerName }}</p>
-        <p>
-            <a href="https://twitter.com/moiaune" target="_blank">twitter</a>
-            <a href="https://github.com/moiaune" target="_blank">github</a>
-        </p>
-        <p>
-            Powered by <a href="https://gohugo.io">Hugo</a> and
-            <a href="https://netlify.com">Netlify</a>
-        </p>
-    </footer>
+        </div> <!-- end .page-content -->
+    </main> <!-- end .main -->
 </body>
 
 </html>

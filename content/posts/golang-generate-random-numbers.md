@@ -8,6 +8,8 @@ draft: false
 
 Here's how to generate pseudorandom numbers in Go between to values. NOTE: You should always seed your random generator, or else it will produce the same result every time. Include this snippet at the top of your main func.
 
+<!--more-->
+
 ```golang
 func main() {
     rand.Seed(time.Now().UnixNano())

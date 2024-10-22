@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -359,16 +358,11 @@ span.linenos.special {
   */
 }
 
-/**
-* THEME: EVERFOREST
-* URL: https://github.com/sainnhe/everforest
-*/
-/** THEME: Inspired by JustBlack **/
 body {
-  background: #FFFFFF;
+  background: #f0f8ff;
   color: #0C0C0D;
   line-height: 1.687;
-  font-family: "Monaco", "JetBrains Mono", "Courier New", "Courier", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
 }
 
@@ -379,10 +373,6 @@ h4,
 h5,
 h6 {
   margin-bottom: 1rem;
-  font-size: 16px;
-  color: #2F9624;
-  font-weight: bold;
-  font-style: italic;
 }
 
 h1 {
@@ -428,17 +418,9 @@ a {
 a:hover {
   color: #0074E8;
 }
-a:before {
-  content: "[";
-  color: #0C0C0D;
-}
-a:after {
-  content: "]";
-  color: #0C0C0D;
-}
 
 hr {
-  max-width: 910px;
+  max-width: 750px;
   color: #0074E8;
   margin: 2rem auto 2rem auto;
   padding: 0 1rem;
@@ -524,7 +506,7 @@ code {
 
 blockquote {
   padding: 1.2rem 1rem;
-  background: #FFFFFF;
+  background: #f0f8ff;
   margin-bottom: 1.5rem;
   border-radius: 8px;
   border-left: 5px solid #2F9624;
@@ -540,6 +522,11 @@ blockquote *:last-child {
   margin-bottom: 0;
 }
 
+section {
+  display: grid;
+  row-gap: 1rem;
+}
+
 .btn {
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -549,144 +536,55 @@ blockquote *:last-child {
   font-size: 16px;
 }
 
-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1rem;
-  max-width: 910px;
-  margin: 0 auto 3rem auto;
+.text-center {
+  text-align: center;
 }
 
-.page-title {
-  font-weight: normal;
-  margin-bottom: 0;
-}
-.page-title::before {
-  content: "#";
-  color: #D70222;
-  top: 0;
-  left: 0;
-  margin-right: 0.5rem;
-}
-
-.main-nav {
-  display: flex;
-  justify-content: end;
-  column-gap: 0.5rem;
-}
-.main-nav__item {
-  display: inline-block;
-  padding: 0.5rem 0.5rem;
-  text-decoration: none;
-  cursor: pointer;
-  align-self: center;
-  color: #7F1BD7;
-}
-.main-nav__item:hover {
-  color: white;
-}
-
-.container {
-  max-width: 910px;
+.page-content {
+  max-width: 750px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem;
 }
-
-.introduction__title {
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-  color: #0C0C0D;
-}
-
-.post-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: space-evenly;
-}
-
-.post__title {
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.post__title a {
-  color: #0C0C0D;
+.page-content > header a {
+  color: #000000;
   text-decoration: none;
-  position: relative;
+  display: grid;
+  justify-items: center;
+  row-gap: 0.5rem;
 }
-.post__title a:hover {
-  text-decoration: underline;
+.page-content > header a img {
+  width: 50px;
+  border-radius: 50%;
 }
-.post__title a:before, .post__title a:after {
-  content: "";
-}
-.post__title a .hashtag {
-  color: #D70222;
-}
-.post__title a .date {
-  color: #2F9624;
+.page-content > header a p {
+  font-size: 1.5rem;
 }
 
-.post__categories {
-  list-style: none;
-  display: flex;
-  column-gap: 0.5rem;
-  margin-bottom: 1rem;
-  padding-left: 0;
+.introduction__content {
+  text-align: center;
 }
 
-.post__categories-item {
-  font-size: 14px;
-  padding: 0.1rem 0.5rem;
+.post {
+  padding: 1rem;
 }
-
-.single-post h2:before {
-  content: "#";
-  color: #D70222;
-  top: 0;
-  left: 0;
-  margin-right: 0.5rem;
+.post header {
+  text-align: center;
 }
-.single-post .post__meta {
-  color: #7F1BD7;
-  font-style: italic;
+.post--list {
+  background: #FFFFFF;
+  border-radius: 8px;
+  text-align: center;
 }
-
 .post__meta {
   font-size: 14px;
 }
-
-.golang {
-  color: black;
-  background-color: #69d6e4;
+.post__title {
+  font-size: 1.8rem;
+  padding-top: 0;
 }
-
-.powershell {
-  color: white;
-  background-color: #073b4c;
-}
-
-.windows {
-  color: black;
-  background-color: #43aa8b;
-}
-
-.azure {
-  background-color: #3a86ff;
-  color: white;
-}
-
-.javascript {
-  background-color: #ffd166;
-  color: black;
-}
-
-.servicenow {
-  background-color: #264653;
-  color: #ffffff;
+.post__title a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .highlight pre {
@@ -710,29 +608,12 @@ pre[class*=language-] {
   display: inline;
 }
 
-footer {
-  text-align: center;
-  padding: 5.5rem 1rem 4rem 1rem;
-}
-
 @media only screen and (max-width: 925px) {
-  header {
-    grid-template-columns: 1fr;
-  }
   hr {
     margin: 0.5rem 1rem 2rem 1rem;
   }
   .container {
     padding: 0 1.5rem;
-  }
-  .page-title {
-    text-align: center;
-  }
-  .main-nav {
-    justify-content: center;
-  }
-  .introduction {
-    grid-template-columns: 1fr;
   }
   .post-list {
     grid-template-columns: 1fr;

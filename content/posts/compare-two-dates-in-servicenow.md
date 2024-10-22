@@ -6,6 +6,8 @@ draft: false
 
 To work with date and datetime in ServiceNow we can use the [GlideDateTime API](https://developer.servicenow.com/dev.do#!/reference/api/sandiego/server/no-namespace/c_APIRef).
 
+<!--more-->
+
 ## Get duration
 
 ```javascript

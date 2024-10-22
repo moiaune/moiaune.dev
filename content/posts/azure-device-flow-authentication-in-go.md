@@ -8,6 +8,8 @@ draft: false
 
 One of the usecases of Go is to create CLI tools for developers to ease their work. Often it involves creating/modifying resources or retrieving information from cloud services. In this post we're going to setup device flow authentication against AzureAD in Go.
 
+<!--more-->
+
 ## Prerequisites
 
 I'm assuming you already have Go installed. You also need an Azure tenant to setup authentication against. This requires that you have permissions to create "App Registrations" in Azure.

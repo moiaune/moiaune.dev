@@ -7,6 +7,8 @@ tags: ['servicenow', 'javascript']
 
 There's no secret that the Javascript support (serverside) in ServiecNow is lacking. And today I came across another little quirk. In ServiceNow we have the `ArrayUtil.unique()` to get an Array of unique values, but this does not support objects. Neither does ServiceNow support `Map()` or `Set()` on the serverside, so here's a little snippet to filter an array of objects and receive unique objects based on a object `key`.
 
+<!--more-->
+
 ```javascript
 /**
  * Get unique objects from an array of object, by key.

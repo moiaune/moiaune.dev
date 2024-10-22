@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 :root {
 
     /*
@@ -41,36 +39,10 @@
 
 }
 
-/**
-* THEME: EVERFOREST
-* URL: https://github.com/sainnhe/everforest
-*/
-
-// $font-size: 16px;
-// $page-width: 910px;
-// $color-fg: #5c6a72;
-// $color-bg: #fdf6e3;
-// $color-bg-1: #f4f0d9;
-// $color-bg-2: #efebd4;
-// $color-statusline1: #93b259;
-// $color-statusline2: #708089;
-// $color-statusline3: #e66868;
-// $color-gray-light: #a6b0a0;
-// $color-gray-medium: #939f91;
-// $color-gray-hard: #829181;
-// $color-red: #f85552;
-// $color-orange: #f57d26;
-// $color-yellow: #dfa000;
-// $color-green: #8da101;
-// $color-blue: #3a94c5;
-// $color-aqua: #35a77c;
-// $color-purple: #df69ba;
-
-/** THEME: Inspired by JustBlack **/
 $font-size: 16px;
-$page-width: 910px;
+$page-width: 750px;
 $color-fg: #0C0C0D;
-$color-bg: #FFFFFF;
+$color-bg: #f0f8ff;
 $color-black: #000000;
 $color-red: #D70222;
 $color-green: #2F9624;
@@ -89,14 +61,13 @@ $color-purple-light: #7F1BD7;
 $color-cyan-light: #0074E8;
 $color-white-light: #FFFFFF;
 
+
+
 body {
     background: $color-bg;
     color: $color-fg;
     line-height: 1.687;
-    // font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
-    // font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-    font-family: 'Monaco', 'JetBrains Mono', 'Courier New', 'Courier', monospace;
-    // font-family: 'IBM Plex Mono', monospace;
+    font-family: -apple-system, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: $font-size;
 }
 
@@ -107,10 +78,6 @@ h4,
 h5,
 h6 {
     margin-bottom: 1rem;
-    font-size: $font-size;
-    color: $color-green;
-    font-weight: bold;
-    font-style: italic;
 }
 
 h1 {
@@ -155,16 +122,6 @@ a {
 
     &:hover {
         color: $color-cyan;
-    }
-
-    &:before {
-        content: "[";
-        color: $color-fg;
-    }
-
-    &:after {
-        content: "]";
-        color: $color-fg;
     }
 }
 
@@ -282,6 +239,11 @@ blockquote {
     }
 }
 
+section {
+    display: grid;
+    row-gap: 1rem;
+}
+
 .btn {
     display: inline-block;
     padding: 0.5rem 1.5rem;
@@ -291,160 +253,67 @@ blockquote {
     font-size: 16px;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-    max-width: $page-width;
-    margin: 0 auto 3rem auto;
+.text-center {
+    text-align: center;
 }
 
-.page-title {
-    font-weight: normal;
-    margin-bottom: 0;
-
-    &::before {
-        content: "#";
-        color: $color-red;
-        top: 0;
-        left: 0;
-        margin-right: .5rem;
-    }
-}
-
-.main-nav {
-    display: flex;
-    justify-content: end;
-    column-gap: .5rem;
-
-    &__item {
-        display: inline-block;
-        padding: 0.5rem .5rem;
-        text-decoration: none;
-        cursor: pointer;
-        align-self: center;
-        color: $color-purple;
-
-        &:hover {
-            color: lighten($color-yellow-light, 10%);
-        }
-    }
-}
-
-.container {
+.page-content {
     max-width: $page-width;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 1rem;
+
+    &>header {
+        a {
+            color: $color-black;
+            text-decoration: none;
+            display: grid;
+            justify-items: center;
+            row-gap: .5rem;
+
+            & img {
+                width: 50px;
+                border-radius: 50%;
+            }
+
+            & p {
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
 
 .introduction {
+    &__content {
+        text-align: center;
+    }
+}
+
+.post {
+    padding: 1rem;
+
+    header {
+        text-align: center;
+    }
+
+    &--list {
+        background: $color-white;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    &__meta {
+        font-size: 14px;
+    }
+
     &__title {
-        margin-bottom: 1.5rem;
-        font-size: 1rem;
-        color: $color-fg;
-    }
-}
+        font-size: 1.8rem;
+        padding-top: 0;
 
-.post-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: space-evenly;
-}
-
-.post__title {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.post__title a {
-    color: $color-fg;
-    text-decoration: none;
-    position: relative;
-
-    &:hover {
-        text-decoration: underline;
-    }
-
-    &:before,
-    &:after {
-        content: "";
-    }
-
-    & .hashtag {
-        color: $color-red;
-    }
-
-    & .date {
-        color: $color-green;
-    }
-}
-
-.post__categories {
-    list-style: none;
-    display: flex;
-    column-gap: 0.5rem;
-    margin-bottom: 1rem;
-    padding-left: 0;
-}
-
-.post__categories-item {
-    font-size: 14px;
-    padding: 0.1rem 0.5rem;
-}
-
-.single-post {
-
-    & h2 {
-        &:before {
-            content: "#";
-            color: $color-red;
-            top: 0;
-            left: 0;
-            margin-right: .5rem;
+        & a {
+            text-decoration: none;
+            color: inherit;
         }
     }
-
-    & .post__meta {
-        color: $color-purple;
-        font-style: italic;
-    }
-}
-
-.post__meta {
-    font-size: 14px;
-}
-
-.golang {
-    color: black;
-    background-color: #69d6e4;
-}
-
-.powershell {
-    color: white;
-    background-color: #073b4c;
-}
-
-.windows {
-    color: black;
-    background-color: #43aa8b;
-}
-
-.azure {
-    background-color: #3a86ff;
-    color: white;
-}
-
-.javascript {
-    background-color: #ffd166;
-    color: black;
-}
-
-.servicenow {
-    background-color: #264653;
-    color: #ffffff;
 }
 
 .highlight pre {
@@ -469,34 +338,13 @@ pre[class*='language-'] {
     display: inline;
 }
 
-footer {
-    text-align: center;
-    padding: 5.5rem 1rem 4rem 1rem;
-}
-
 @media only screen and (max-width: 925px) {
-    header {
-        grid-template-columns: 1fr;
-    }
-
     hr {
         margin: 0.5rem 1rem 2rem 1rem;
     }
 
     .container {
         padding: 0 1.5rem;
-    }
-
-    .page-title {
-        text-align: center;
-    }
-
-    .main-nav {
-        justify-content: center;
-    }
-
-    .introduction {
-        grid-template-columns: 1fr;
     }
 
     .post-list {

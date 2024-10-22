@@ -8,6 +8,8 @@ draft: false
 
 Microsoft Teams support different Connections and one of the simpliest is "Incomming Webhook" which gives you a URL that you can POST to with a correctly configured JSON body and the result will be displayed in your specified channel. In this guide we’ll set this up and POST to it from Service-Now when an incident is created or updated.
 
+<!--more-->
+
 ## Setting up Connections in Microsoft Teams
 
 To setup an "Incomming Webhook" for a specific channel do the follow:
