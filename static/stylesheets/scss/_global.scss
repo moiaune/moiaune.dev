@@ -1,74 +1,36 @@
 :root {
+    --font-size: 16px;
+    --page-width: 750px;
+    --color-fg: #0C0C0D;
+    --color-bg: #f0f8ff;
+    --color-bg-rgb: 240, 248, 255;
+    --color-black: #000000;
+    --color-red: #D70222;
+    --color-green: #2F9624;
+    --color-yellow: #BE9B00;
+    --color-blue: #0060DF;
+    --color-purple: #7F1BD7;
+    --color-cyan: #0074E8;
+    --color-white: #FFFFFF;
 
-    /*
-   * THEME: GRUVBOX
-   * URL: https://github.com/morhetz/gruvbox
-   */
-
-    // --color-bg: #282828;
-    // --color-bg-0h: #1d2021;
-    // --color-bg-1: #3c3836;
-    // --color-bg-2: #504945;
-    // --color-bg-3: #665c54;
-    // --color-bg-4: #7c6f64;
-
-    // --color-fg: #ebdbb2;
-    // --color-fg-0: #fbf1c7;
-    // --color-fg-1: #ebdbb2;
-    // --color-fg-2: #d5c4a1;
-    // --color-fg-3: #bdae93;
-    // --color-fg-4: #a89984;
-
-    // --color-red: #cc241d;
-    // --color-red-bright: #fb4934;
-    // --color-green: #98971a;
-    // --color-green-bright: #b8bb26;
-    // --color-yellow: #d79921;
-    // --color-yellow-bright: #fabd2f;
-    // --color-blue: #458588;
-    // --color-blue-bright: #83a598;
-    // --color-purple: #b16286;
-    // --color-purple-bright: #d3869b;
-    // --color-aqua: #689d6a;
-    // --color-aqua-bright: #8ec07c;
-    // --color-gray: #928374;
-    // --color-gray-medium: #928374;
-    // --color-gray-bright: #a89984;
-    // --color-orange: #d65d0e;
-    // --color-orange-bright: #fe8019;
-
+    --color-black-light: #000000;
+    --color-red-light: #FCF2F5;
+    --color-green-light: #19C117;
+    --color-yellow-light: #FEFBD6;
+    --color-blue-light: #0060DF;
+    --color-purple-light: #7F1BD7;
+    --color-cyan-light: #0074E8;
+    --color-white-light: #FFFFFF;
 }
 
-$font-size: 16px;
-$page-width: 750px;
-$color-fg: #0C0C0D;
 $color-bg: #f0f8ff;
-$color-black: #000000;
-$color-red: #D70222;
-$color-green: #2F9624;
-$color-yellow: #BE9B00;
-$color-blue: #0060DF;
-$color-purple: #7F1BD7;
-$color-cyan: #0074E8;
-$color-white: #FFFFFF;
-
-$color-black-light: #000000;
-$color-red-light: #FCF2F5;
-$color-green-light: #19C117;
-$color-yellow-light: #FEFBD6;
-$color-blue-light: #0060DF;
-$color-purple-light: #7F1BD7;
-$color-cyan-light: #0074E8;
-$color-white-light: #FFFFFF;
-
-
 
 body {
-    background: $color-bg;
-    color: $color-fg;
+    background: var(--color-bg);
+    color: var(--color-fg);
     line-height: 1.687;
     font-family: -apple-system, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: $font-size;
+    font-size: var(--font-size);
 }
 
 h1,
@@ -112,22 +74,22 @@ pre {
 }
 
 pre {
-    border: 1px solid $color-purple;
+    border: 1px solid var(--color-purple);
     padding: 1rem;
     border-radius: 8px;
 }
 
 a {
-    color: $color-blue;
+    color: var(--color-blue);
 
     &:hover {
-        color: $color-cyan;
+        color: var(--color-cyan);
     }
 }
 
 hr {
-    max-width: $page-width;
-    color: $color-cyan;
+    max-width: var(--page-width);
+    color: var(--color-cyan);
     margin: 2rem auto 2rem auto;
     padding: 0 1rem;
 }
@@ -139,7 +101,7 @@ ul {
 
     & li:before {
         content: "*";
-        color: $color-red;
+        color: var(--color-red);
         margin-right: .5rem;
     }
 }
@@ -152,7 +114,7 @@ ol {
 
 ul,
 ol {
-    color: $color-fg;
+    color: var(--color-fg);
     font-size: 1rem;
     padding-left: 1.5rem;
 }
@@ -177,11 +139,11 @@ table {
     width: 100%;
     max-width: 100%;
     border-collapse: collapse;
-    border: 1px solid $color-fg;
+    border: 1px solid var(--color-fg);
 
     td,
     th {
-        border: 1px solid $color-fg;
+        border: 1px solid var(--color-fg);
         padding: .5rem;
     }
 
@@ -213,20 +175,20 @@ table {
 }
 
 code {
-    font-size: $font-size - 2px;
+    font-size: var(--font-size) - 2px;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    color: $color-fg;
+    color: var(--color-fg);
 }
 
 blockquote {
     padding: 1.2rem 1rem;
-    background: $color-bg;
+    background: var(--color-bg);
     margin-bottom: 1.5rem;
     border-radius: 8px;
-    border-left: 5px solid $color-green;
+    border-left: 5px solid var(--color-green);
 
     & * {
-        color: $color-fg !important;
+        color: var(--color-fg) !important;
     }
 
     & ul li:before {
@@ -247,7 +209,7 @@ section {
 .btn {
     display: inline-block;
     padding: 0.5rem 1.5rem;
-    border: 1px solid $color-blue;
+    border: 1px solid var(--color-blue);
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
@@ -258,13 +220,13 @@ section {
 }
 
 .page-content {
-    max-width: $page-width;
+    max-width: var(--page-width);
     margin: 0 auto;
     padding: 1rem;
 
     &>header {
         a {
-            color: $color-black;
+            color: var(--color-black);
             text-decoration: none;
             display: grid;
             justify-items: center;
@@ -298,7 +260,7 @@ section {
     }
 
     &--list {
-        background: $color-white;
+        background: var(--color-white);
         border-radius: 8px;
         text-align: center;
     }
@@ -325,15 +287,14 @@ section {
     overflow: auto;
     word-wrap: normal;
     word-break: normal;
-    border: 1px solid $color-purple;
+    border: 1px solid var(--color-purple);
     border-radius: 8px;
 }
 
 code[class*='language-'],
 pre[class*='language-'] {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    // font-size: 1rem;
-    font-size: $font-size - 2px;
+    font-size: var(--font-size) - 2px;
 }
 
 .footnotes p {
