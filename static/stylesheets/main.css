@@ -557,7 +557,9 @@ section {
   border-radius: 50%;
 }
 .page-content > header a p {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .introduction__content {
