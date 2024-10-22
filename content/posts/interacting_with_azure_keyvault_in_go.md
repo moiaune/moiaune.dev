@@ -8,6 +8,8 @@ draft: false
 
 Most times when working with API's there some kind of documentation on how to iteract with it. Working with Azure SDK for Go is a different story. There's almost no documentation (except the code itself). At my current job we use Azure a lot and a big part of that is Azure Key Vault. For my latest project I had to fetch some secrets from Key Vault to use in a CLI application, so I had to start digging into the source code to find how to interact with it.
 
+<!--more-->
+
 ## 1. Authentication
 
 Almost any endpoint in the Azure API requires authentication, so let's start with that. Services in the Azure API, for the most part, use the `autorest/azure/auth` module for handling authentication, but for Key Vault it is a bit different. For Key Vaults we have two modules; one for managing Key Vaults, and one for working with the data.

@@ -8,6 +8,8 @@ draft: false
 
 Recently I was asked to find a way for users to easily create a string consisting of the task number and short description that they could paste into the time management software. In this short article we're going to take a look at how we can copy something to your system clipboard from a UI Action in ServiceNow.
 
+<!--more-->
+
 ## The snippet
 
 ```javascript

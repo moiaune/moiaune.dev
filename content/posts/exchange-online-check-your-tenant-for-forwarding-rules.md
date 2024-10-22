@@ -8,6 +8,8 @@ draft: false
 
 In this guide we’ll take a look at how you can scan your tenant for “hidden” forwarding rules by using Powershell with Exchange Online.
 
+<!--more-->
+
 ## Why
 
 One technique that is common amongs hackers, that gain access to email accounts, is to setup a forwarding rule for all incomming email. That way they can read all new emails sent to the victim without beeing flagget or detected by audit logs. They can also create rules for emails from a specific address that go to a folder the hacker controls, ie password reset emails. They can then request password change for a numerous different services without the user beeing alerted right away and maybe get further into your system. Especially if its cloud based.

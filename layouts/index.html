@@ -1,32 +1,42 @@
 {{ define "main" }}
 
-<aside class="container introduction">
+<aside class="introduction">
     <div class="introduction__content">
-        <h2 class="introduction__title">Hi, I'm Mads 👋</h2>
-        <div class="introduction__body">
-            <p>
-                I'm an DevOps Engineer from Norway 🇳🇴, spending my days writing code. I
-                created this site as a personal notebook, but hopefully you will find
-                something interresting too.
-            </p>
-            <p>
-                You can reach me at
-                <a href="https://twitter.com/{{.Site.Params.Twitter}}">@{{.Site.Params.Twitter}}</a>
-            </p>
-        </div>
+        <p>
+            I'm an DevOps Engineer from Norway, spending my days writing code. I
+            created this site as a personal notebook, but hopefully you will find
+            something interresting too.
+        </p>
+        <p>
+            You can reach me at
+            <a href="https://twitter.com/{{.Site.Params.Twitter}}">@{{.Site.Params.Twitter}}</a>
+        </p>
     </div>
 </aside>
 
 <hr />
 
-<section class="container post-list">
+<section>
     {{ range.Site.RegularPages }}
-    <div class="post">
-        <h3 class="post__title">
-            <a href="{{.Permalink}}"><span class="hashtag">*</span> {{.Title}}
-                <span class="date">({{.Date.Format "02-01-2006"}})</span></a>
-        </h3>
-    </div>
+    <article class="post post--list">
+        <header>
+            <div class="post__date">
+                <span>{{.Date.Format "January 2, 2006"}}</span>
+            </div>
+
+            <h3 class="post__title">
+                <a href="{{.Permalink}}">{{.Title}}</a>
+            </h3>
+        </header>
+
+        <div class="post__content">
+            <p>{{ .Summary }}</p>
+
+            {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}">Read more ...</a>
+            {{ end }}
+        </div>
+    </article>
     {{ end }}
 </section>
 

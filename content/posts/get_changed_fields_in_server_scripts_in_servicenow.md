@@ -8,6 +8,8 @@ draft: false
 
 In ServiceNow you often write Business Rules or some other logic, based on fields that has been changed/updated. For the most part, this can be done via GUI, but sometimes you have to resort to some scripting. If you ever need to get which fields has been changed/updated, e.g in an advanced filter, this is how you check for it.
 
+<!--more-->
+
 ```javascript
 (function(current){
     var gru = GlideScriptRecordUtil.get(current);

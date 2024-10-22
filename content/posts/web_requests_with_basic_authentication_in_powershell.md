@@ -6,6 +6,8 @@ draft: false
 
 HTTP Basic Authentication is one of many authentication schemes supported by the HTTP protocol, and is a very common option when authenticating to a web service. The basic authentication scheme is very simple and consists of generating a base64 token from your username and password seperated by a colon (`:`) and putting the token in an `Authorization` HTTP header. Let's explore some examples in Powershell.
 
+<!--more-->
+
 ## Manually creating the token
 
 Let's start with an example from scratch.

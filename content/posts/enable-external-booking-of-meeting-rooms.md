@@ -8,6 +8,8 @@ draft: false
 
 From time to time you might need to share one or more of your meeting rooms with external users. In this posts we're going through three options for how you can enable this. Other options do exists (like connecting an Office 365 tenant to another and so), but this post is meant for the time you need to give temporary access or only to one or more users.
 
+<!--more-->
+
 _Disclaimer: I have only tried this is Exchange Online._
 
 ## Enable processing of external meeting messages
