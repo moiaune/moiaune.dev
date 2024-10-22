@@ -352,18 +352,35 @@ span.linenos.special {
   color: #2aa198;
 } /* Literal.Number.Integer.Long */
 :root {
-  /*
-  * THEME: GRUVBOX
-  * URL: https://github.com/morhetz/gruvbox
-  */
+  --font-size: 16px;
+  --page-width: 750px;
+  --color-fg: #0C0C0D;
+  --color-bg: #f0f8ff;
+  --color-bg-rgb: 240, 248, 255;
+  --color-black: #000000;
+  --color-red: #D70222;
+  --color-green: #2F9624;
+  --color-yellow: #BE9B00;
+  --color-blue: #0060DF;
+  --color-purple: #7F1BD7;
+  --color-cyan: #0074E8;
+  --color-white: #FFFFFF;
+  --color-black-light: #000000;
+  --color-red-light: #FCF2F5;
+  --color-green-light: #19C117;
+  --color-yellow-light: #FEFBD6;
+  --color-blue-light: #0060DF;
+  --color-purple-light: #7F1BD7;
+  --color-cyan-light: #0074E8;
+  --color-white-light: #FFFFFF;
 }
 
 body {
-  background: #f0f8ff;
-  color: #0C0C0D;
+  background: var(--color-bg);
+  color: var(--color-fg);
   line-height: 1.687;
   font-family: -apple-system, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
+  font-size: var(--font-size);
 }
 
 h1,
@@ -407,21 +424,21 @@ pre {
 }
 
 pre {
-  border: 1px solid #7F1BD7;
+  border: 1px solid var(--color-purple);
   padding: 1rem;
   border-radius: 8px;
 }
 
 a {
-  color: #0060DF;
+  color: var(--color-blue);
 }
 a:hover {
-  color: #0074E8;
+  color: var(--color-cyan);
 }
 
 hr {
-  max-width: 750px;
-  color: #0074E8;
+  max-width: var(--page-width);
+  color: var(--color-cyan);
   margin: 2rem auto 2rem auto;
   padding: 0 1rem;
 }
@@ -433,7 +450,7 @@ ul {
 }
 ul li:before {
   content: "*";
-  color: #D70222;
+  color: var(--color-red);
   margin-right: 0.5rem;
 }
 
@@ -445,7 +462,7 @@ ol {
 
 ul,
 ol {
-  color: #0C0C0D;
+  color: var(--color-fg);
   font-size: 1rem;
   padding-left: 1.5rem;
 }
@@ -470,11 +487,11 @@ table {
   width: 100%;
   max-width: 100%;
   border-collapse: collapse;
-  border: 1px solid #0C0C0D;
+  border: 1px solid var(--color-fg);
 }
 table td,
 table th {
-  border: 1px solid #0C0C0D;
+  border: 1px solid var(--color-fg);
   padding: 0.5rem;
 }
 table tr:first-child th {
@@ -499,20 +516,20 @@ table tr:nth-child(odd) td {
 }
 
 code {
-  font-size: 14px;
+  font-size: var(--font-size)-2px;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  color: #0C0C0D;
+  color: var(--color-fg);
 }
 
 blockquote {
   padding: 1.2rem 1rem;
-  background: #f0f8ff;
+  background: var(--color-bg);
   margin-bottom: 1.5rem;
   border-radius: 8px;
-  border-left: 5px solid #2F9624;
+  border-left: 5px solid var(--color-green);
 }
 blockquote * {
-  color: #0C0C0D !important;
+  color: var(--color-fg) !important;
 }
 blockquote ul li:before {
   content: "";
@@ -530,7 +547,7 @@ section {
 .btn {
   display: inline-block;
   padding: 0.5rem 1.5rem;
-  border: 1px solid #0060DF;
+  border: 1px solid var(--color-blue);
   border-radius: 8px;
   text-decoration: none;
   font-size: 16px;
@@ -541,12 +558,12 @@ section {
 }
 
 .page-content {
-  max-width: 750px;
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 1rem;
 }
 .page-content > header a {
-  color: #000000;
+  color: var(--color-black);
   text-decoration: none;
   display: grid;
   justify-items: center;
@@ -573,7 +590,7 @@ section {
   text-align: center;
 }
 .post--list {
-  background: #FFFFFF;
+  background: var(--color-white);
   border-radius: 8px;
   text-align: center;
 }
@@ -596,14 +613,14 @@ section {
   overflow: auto;
   word-wrap: normal;
   word-break: normal;
-  border: 1px solid #7F1BD7;
+  border: 1px solid var(--color-purple);
   border-radius: 8px;
 }
 
 code[class*=language-],
 pre[class*=language-] {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 14px;
+  font-size: var(--font-size)-2px;
 }
 
 .footnotes p {
