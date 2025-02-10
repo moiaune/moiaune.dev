@@ -10,36 +10,8 @@
     <meta name="title"
         content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title"
-        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}" />
-    <meta property="og:description"
-        content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}" />
-    <meta property="og:site_name"
-        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:image" content="/android-chrome-512x512.png" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@moiaune" />
-    <meta name="twitter:creator" content="@moiaune" />
-    <meta name="twitter:url" content="{{ .Permalink }}" />
-    <meta name="twitter:title"
-        content="{{ if .IsHome -}}{{ .Site.Title }}{{- else -}}{{ .Title }} – {{ .Site.Title }}{{- end }}" />
-    <meta name="twitter:description"
-        content="{{ with .Params.Description }}{{ . }}{{ else }}{{ $.Site.Params.Description }}{{ end }}" />
-    <link rel="canonical" href="{{ .Permalink }}" />
-
-    <!-- Mastodon -->
-    <link rel="me" href="https://mastodon.social/@moiaune" />
-    <meta name="fediverse:creator" content="@moiaune@mastodon.social">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/favicon.ico" />
 
     <link rel="stylesheet" href="/stylesheets/main.css" />
 </head>
@@ -49,7 +21,7 @@
         <div class="page-content">
             <header>
                 <a href="/">
-                    <img class="avatar" src="/images/avatar2.jpg" alt="Avatar" size="50x50" />
+                    <img class="avatar" src="/images/profile_image.jpg" alt="Avatar" size="50x50" />
                     <p>Mads Moi-Aune</p>
                 </a>
             </header>

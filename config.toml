@@ -13,7 +13,7 @@ PygmentsStyle = "fruity"
 
 [params]
   OwnerName = "Mads Moi-Aune"
-  Twitter = "moiaune"
+  Bluesky = "moiaune.dev"
 
 [permalinks]
   posts = "/:year/:month/:day/:title/"
