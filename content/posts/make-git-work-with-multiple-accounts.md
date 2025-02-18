@@ -64,7 +64,7 @@ In our main `.gitconfig` (usually under `~/.gitconfig`) we need to add these con
 
 Now that we have set our conditionals we can edit each of the `.gitconfig` files to tell git which ssh-key to use, and set other account specific configs like name and email.
 
-**~/code/github.com/personal/.gitconfig**
+*~/code/github.com/personal/.gitconfig*
 
 ```
 [user]
@@ -74,7 +74,7 @@ Now that we have set our conditionals we can edit each of the `.gitconfig` files
     sshCommand = "ssh -i ~/.ssh/gh_personal
 ```
 
-**~/code/github.com/work/.gitconfig**
+*~/code/github.com/work/.gitconfig*
 
 ```
 [user]

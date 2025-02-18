@@ -1,7 +1,6 @@
 ---
 title: 'Bookmarks'
 date: 2021-02-22T21:29:24+01:00
-draft: false
 ---
 
 This page is a collection of external resources that I found usefull.

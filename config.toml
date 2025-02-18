@@ -1,19 +1,17 @@
 baseURL = "https://moiaune.dev/"
 languageCode = "en-us"
 title = "moiaune.dev"
-
-PygmentsCodeFences = true
-PygmentsUseClasses = true
-PygmentsStyle = "fruity"
+theme = "plaintext"
+enableGitInfo = true
 
 [markup]
   [markup.highlight]
-    tabWidth = 4
-    codeFences = true
+    codeFences = false
 
-[params]
-  OwnerName = "Mads Moi-Aune"
-  Bluesky = "moiaune.dev"
+[pagination]
+    disableAliases = false
+    pagerSize = 10
+    path = "page"
 
 [permalinks]
   posts = "/:year/:month/:day/:title/"

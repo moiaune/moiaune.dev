@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+<div class="page-title">
+    <h1>moiaune.dev</h1>
+</div>
+
+<div class="intro">
+    <p>Hi, my name is Mads! *waves*</p>
+
+    <p>
+        Computer engineer from Norway. Been on the internet since year
+        2000. I created this site as a personal notebook, but hopefully
+        you will find something interresting too.
+    </p>
+
+    <p>
+        You can reach me at
+        <a href="https://bsky.app/profile/moiaune.dev"
+            rel="nofollow">
+            @moiaune.dev
+        </a>
+    </p>
+</div>
+
+<hr />
+
+<section class="post-list">
+    {{ $pages := where site.RegularPages "Type" "posts" }}
+    {{ $paginator := .Paginate $pages.ByDate.Reverse 10 }}
+
+    <ul>
+    {{ range $paginator.Pages }}
+        <li>
+            * <a href="{{.Permalink}}">{{.Title}}</a>
+            <span>({{ .Date.Format "02-03-2006" }})</span>
+        </li>
+    {{ end }}
+    </ul>
+
+    <hr />
+
+    {{ template "_internal/pagination.html" (dict "page" . "format" "terse") }}
+
+    <hr />
+</section> <!-- end .post-list -->
+
+{{ end }}

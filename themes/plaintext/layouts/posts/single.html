@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<article class="article">
+    <p class="article--metadata">
+        Date: {{.Date.Format "02-03-2006"}}     </p>
+
+    {{ with .GitInfo }}
+    <p class="article--metadata">Modified: {{ .CommitDate.Format "02-01-2006"}}</p>
+    {{ end }}
+
+    <p class="article--metadata">
+        (<a href="https://github.com/moiaune/moiaune.dev/blob/main/content/posts/{{.File.LogicalName}}">raw</a> / 
+         <a href="https://github.com/moiaune/moiaune.dev/commits/main/content/posts/{{.File.LogicalName}}">history</a>)
+
+
+
+    <h1 class="article--heading">* {{.Title}}</h1>
+
+    {{ if .Params.toc }}
+    <div class="article--toc">
+        <h2>Table of Contents</h2>
+        {{ .TableOfContents }}
+    </div>
+
+    <hr />
+    {{ end }}
+
+    <div class="article--body">{{ .Content }}</div>
+</article>
+
+<hr />
+
+{{ with .GitInfo }}
+<p class="last-modified"><i>This page was last modified {{ .CommitDate.Format "15:04:05 02-01-2006"}}</i></p>
+{{ end }}
+
+{{ end }}
