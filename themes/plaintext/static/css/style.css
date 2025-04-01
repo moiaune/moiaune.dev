@@ -1,6 +1,6 @@
 :root {
     --page-size: 96ex;
-    --font-size: 10pt;
+    --font-size: 12pt;
 }
 
 * { box-sizing: border-box; }
