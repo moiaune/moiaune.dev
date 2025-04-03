@@ -94,3 +94,10 @@ footer {
         display: none;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body { background: #181818; color: #efefef; }
+    header { background: #484848; }
+    a { color: cyan; }
+    pre { background: #484848; }
+}
