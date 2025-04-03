@@ -20,6 +20,7 @@ header {
 div.content {
     max-width: var(--page-size);
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 hr { margin: 1.12em 0; }
@@ -47,7 +48,10 @@ pre {
 
 .post-list ul { list-style: none; }
 
-.article--metadata { text-align: right; }
+.article--metadata {
+    text-align: right;
+    line-height: 1;
+}
 .article--heading {
     margin: 2em 0;
     text-align: center;
