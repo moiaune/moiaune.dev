@@ -10,7 +10,7 @@ enableGitInfo = true
 
 [pagination]
     disableAliases = false
-    pagerSize = 10
+    pagerSize = 15
     path = "page"
 
 [permalinks]

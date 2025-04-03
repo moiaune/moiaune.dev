@@ -26,7 +26,7 @@
 
 <section class="post-list">
     {{ $pages := where site.RegularPages "Type" "posts" }}
-    {{ $paginator := .Paginate $pages.ByDate.Reverse 10 }}
+    {{ $paginator := .Paginate $pages.ByDate.Reverse 15 }}
 
     <ul>
     {{ range $paginator.Pages }}
