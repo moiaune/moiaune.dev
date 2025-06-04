@@ -55,6 +55,7 @@ pre {
 .article--heading {
     margin: 2em 0;
     text-align: center;
+    text-transform: uppercase;
 }
 .article--body p,
 .article--body pre {

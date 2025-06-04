@@ -2,19 +2,16 @@
 
 <article class="article">
     <p class="article--metadata">
-        Date: {{.Date.Format "02-01-2006"}}     </p>
-
-    {{ with .GitInfo }}
-    <p class="article--metadata">Modified: {{ .CommitDate.Format "02-01-2006"}}</p>
-    {{ end }}
-
-    <p class="article--metadata">
         (<a href="https://github.com/moiaune/moiaune.dev/blob/main/content/posts/{{.File.LogicalName}}">raw</a> / 
          <a href="https://github.com/moiaune/moiaune.dev/commits/main/content/posts/{{.File.LogicalName}}">history</a>)
+    </p>
+
+    <p class="article--metadata">
+        <i>Date: {{.Date.Format "02/01/2006"}}</i>
+    </p>
 
 
-
-    <h1 class="article--heading">* {{.Title}}</h1>
+    <h1 class="article--heading">{{.Title}}</h1>
 
     {{ if .Params.toc }}
     <div class="article--toc">
@@ -33,5 +30,6 @@
 {{ with .GitInfo }}
 <p class="last-modified"><i>This page was last modified {{ .CommitDate.Format "15:04:05 02-01-2006"}}</i></p>
 {{ end }}
+
 
 {{ end }}
